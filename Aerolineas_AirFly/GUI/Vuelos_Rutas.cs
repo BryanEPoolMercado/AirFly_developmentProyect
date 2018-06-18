@@ -27,7 +27,7 @@ namespace Aerolineas_AirFly.GUI
             objVuelos = new Vuelos();
 
             objVuelos.fecha_vuelo = Convert.ToDateTime(dt_Fecha.Text);
-            objVuelos.hora_vuelo = txt_HoraVuelo.Text;
+            objVuelos.hora_vuelo = mktxt_hora.Text;
             objVuelos.tiempo_vuelo = txt_Tiempo.Text;
             objVuelos.distancia_vuelo = txt_DistanciaVuelo.Text;
             objVuelos.id_avion = Convert.ToInt32(cmb_NombreAvion.SelectedValue);
