@@ -51,7 +51,7 @@ namespace Aerolineas_AirFly.GUI
 
             objVuelos.id_vuelo = Convert.ToInt32(txt_CodigoVuelo.Text.Trim());
             objVuelos.fecha_vuelo = Convert.ToDateTime(dt_Fecha.Text);
-            objVuelos.hora_vuelo = txt_HoraVuelo.Text;
+            objVuelos.hora_vuelo = mktxt_hora.Text;
             objVuelos.tiempo_vuelo = txt_Tiempo.Text;
             objVuelos.distancia_vuelo = txt_DistanciaVuelo.Text;
             objVuelos.id_avion = Convert.ToInt32(cmb_NombreAvion.SelectedValue);
@@ -76,7 +76,7 @@ namespace Aerolineas_AirFly.GUI
             txt_DistanciaVuelo.Clear();
             txt_Tiempo.Clear();
             dt_Fecha.ResetText();
-            txt_HoraVuelo.Clear();
+            mktxt_hora.Clear();
             cmb_NombreAvion.ResetText();
             cmb_NombreRuta.ResetText();
         }
@@ -182,7 +182,7 @@ namespace Aerolineas_AirFly.GUI
                 txt_CodigoVuelo.Text = Convert.ToString(dgv_Vuelos.Rows[filaSeleccionada].Cells[0].Value.ToString());
                 cmb_NombreRuta.Text = dgv_Vuelos.Rows[filaSeleccionada].Cells[1].Value.ToString();
                 dt_Fecha.Text = Convert.ToString(dgv_Vuelos.Rows[filaSeleccionada].Cells[2].Value.ToString());
-                txt_HoraVuelo.Text = dgv_Vuelos.Rows[filaSeleccionada].Cells[3].Value.ToString();
+                mktxt_hora.Text = dgv_Vuelos.Rows[filaSeleccionada].Cells[3].Value.ToString();
                 txt_DistanciaVuelo.Text = dgv_Vuelos.Rows[filaSeleccionada].Cells[4].Value.ToString();
                 txt_Tiempo.Text = dgv_Vuelos.Rows[filaSeleccionada].Cells[5].Value.ToString();
                 cmb_NombreAvion.Text = dgv_Vuelos.Rows[filaSeleccionada].Cells[6].Value.ToString();
