@@ -29,5 +29,10 @@ namespace Aerolineas_AirFly
             frm_Registrar registro = new frm_Registrar();
             registro.Show();
         }
+
+        private void btn_cerrar_main_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

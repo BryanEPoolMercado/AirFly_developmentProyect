@@ -77,7 +77,7 @@ namespace Aerolineas_AirFly.GUI
         public void MostrarAviones()
         {
             dgv_aviones.AutoGenerateColumns = false;
-            dgv_aviones.DataSource = servicesAvion.GetListAvion();
+            dgv_aviones.DataSource = servicesAvion.GetListaAvion();
         }
         public void MostrarAerolinea()
         {
@@ -157,21 +157,21 @@ namespace Aerolineas_AirFly.GUI
         private void btn_AgregarAvion_Click(object sender, EventArgs e)
         {
             servicesAvion.AgregarAvion(datosAvion());
-            dgv_aviones.DataSource = servicesAvion.GetListAvion();
+            dgv_aviones.DataSource = servicesAvion.GetListaAvion();
             LimpiarAvion();
         }
 
         private void btn_ActualizarAvion_Click(object sender, EventArgs e)
         {
             servicesAvion.ActualizarAvion(ModificarAvion());
-            dgv_aviones.DataSource = servicesAvion.GetListAvion();
+            dgv_aviones.DataSource = servicesAvion.GetListaAvion();
             LimpiarAvion();
         }
 
         private void btn_EliminarAvion_Click(object sender, EventArgs e)
         {
             servicesAvion.EliminarAvion(ModificarAvion());
-            dgv_aviones.DataSource = servicesAvion.GetListAvion();
+            dgv_aviones.DataSource = servicesAvion.GetListaAvion();
             LimpiarAvion();
         }
 

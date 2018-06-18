@@ -643,7 +643,7 @@
             // 
             // aerolinea
             // 
-            this.aerolinea.DataPropertyName = "id_aerolinea";
+            this.aerolinea.DataPropertyName = "nombre_aerolinea";
             this.aerolinea.HeaderText = "Aerolinea";
             this.aerolinea.Name = "aerolinea";
             this.aerolinea.ReadOnly = true;
@@ -657,7 +657,7 @@
             // 
             // secciones
             // 
-            this.secciones.DataPropertyName = "id_secciones";
+            this.secciones.DataPropertyName = "nombre_seccion";
             this.secciones.HeaderText = "Secciones";
             this.secciones.Name = "secciones";
             this.secciones.ReadOnly = true;

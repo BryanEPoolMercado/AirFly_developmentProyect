@@ -4,20 +4,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Datos.Modelo;
+using Datos.BO;
 
 namespace Datos.Servicios
 {
     public class srv_Vuelos
     {
         //list
-        public List<Vuelos> GetListVuelos()
+        private AirFly_Modelo modeloVuelo;
+
+        public List<Vuelos_BO> GetListaVuelos()
         {
-            List<Vuelos> objVuelos = new List<Vuelos>();
-            using (var db = new AirFly_Modelo())
-            {
-                objVuelos = db.Vuelos.ToList();
-                return objVuelos;
-            }
+            modeloVuelo = new AirFly_Modelo();
+            var selectavion = (from vue in modeloVuelo.Vuelos
+                               join avi in modeloVuelo.Avion on vue.id_avion equals avi.id_avion
+                               join rut in modeloVuelo.Ruta on vue.id_ruta equals rut.id_ruta
+
+                               select new Vuelos_BO
+                               {
+                                   id_vuelo = vue.id_vuelo,
+                                   distancia_vuelo = vue.distancia_vuelo,
+                                   fecha_vuelo = vue.fecha_vuelo,
+                                   hora_vuelo = vue.hora_vuelo,
+                                   tiempo_vuelo = vue.tiempo_vuelo,
+                                   nombre_avion = avi.nombre_avion,
+                                   nombre_ruta = rut.nombre_ruta,
+                               }).ToList();
+            return selectavion;
         }
         //add
         public void AgregarVuelos(Vuelos item)

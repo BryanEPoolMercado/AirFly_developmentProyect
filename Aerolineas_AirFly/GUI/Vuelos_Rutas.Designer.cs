@@ -37,6 +37,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.bunifuCards2 = new Bunifu.Framework.UI.BunifuCards();
+            this.txt_HoraVuelo = new System.Windows.Forms.TextBox();
             this.btn_EliminarVuelo = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_ActualizarVuelo = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_AgregarVuelo = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -48,22 +49,16 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txt_DistanciaVuelo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dt_Hora = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.dt_Fecha = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cmb_NombreRuta = new System.Windows.Forms.ComboBox();
-            this.dgv_vuelos_rutas = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.RUTA_vuelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha_vuelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Hora_vuelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Distancia_vuelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tiempo_vuelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Avion_vuelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_Vuelos = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dgv_pais = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.dgv_Rutas = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.clave = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ruta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ORIGEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DESTINO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.distancia = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -84,12 +79,19 @@
             this.btn_EliminarRuta = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_ActualizarRuta = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_AgregarRuta = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.clavevuelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RUTA_vuelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha_vuelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Hora_vuelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Distancia_vuelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tiempo_vuelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Avion_vuelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.bunifuCards2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_vuelos_rutas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Vuelos)).BeginInit();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_pais)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Rutas)).BeginInit();
             this.bunifuCards1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -116,7 +118,7 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.bunifuCards2);
-            this.tabPage2.Controls.Add(this.dgv_vuelos_rutas);
+            this.tabPage2.Controls.Add(this.dgv_Vuelos);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -131,6 +133,7 @@
             this.bunifuCards2.BorderRadius = 5;
             this.bunifuCards2.BottomSahddow = false;
             this.bunifuCards2.color = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(141)))), ((int)(((byte)(255)))));
+            this.bunifuCards2.Controls.Add(this.txt_HoraVuelo);
             this.bunifuCards2.Controls.Add(this.btn_EliminarVuelo);
             this.bunifuCards2.Controls.Add(this.btn_ActualizarVuelo);
             this.bunifuCards2.Controls.Add(this.btn_AgregarVuelo);
@@ -142,7 +145,6 @@
             this.bunifuCards2.Controls.Add(this.label9);
             this.bunifuCards2.Controls.Add(this.txt_DistanciaVuelo);
             this.bunifuCards2.Controls.Add(this.label1);
-            this.bunifuCards2.Controls.Add(this.dt_Hora);
             this.bunifuCards2.Controls.Add(this.label7);
             this.bunifuCards2.Controls.Add(this.dt_Fecha);
             this.bunifuCards2.Controls.Add(this.label6);
@@ -156,6 +158,14 @@
             this.bunifuCards2.ShadowDepth = 20;
             this.bunifuCards2.Size = new System.Drawing.Size(1215, 222);
             this.bunifuCards2.TabIndex = 2;
+            // 
+            // txt_HoraVuelo
+            // 
+            this.txt_HoraVuelo.Location = new System.Drawing.Point(415, 39);
+            this.txt_HoraVuelo.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_HoraVuelo.Name = "txt_HoraVuelo";
+            this.txt_HoraVuelo.Size = new System.Drawing.Size(132, 22);
+            this.txt_HoraVuelo.TabIndex = 41;
             // 
             // btn_EliminarVuelo
             // 
@@ -191,6 +201,7 @@
             this.btn_EliminarVuelo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_EliminarVuelo.Textcolor = System.Drawing.Color.White;
             this.btn_EliminarVuelo.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_EliminarVuelo.Click += new System.EventHandler(this.btn_EliminarVuelo_Click);
             // 
             // btn_ActualizarVuelo
             // 
@@ -226,6 +237,7 @@
             this.btn_ActualizarVuelo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_ActualizarVuelo.Textcolor = System.Drawing.Color.White;
             this.btn_ActualizarVuelo.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ActualizarVuelo.Click += new System.EventHandler(this.btn_ActualizarVuelo_Click);
             // 
             // btn_AgregarVuelo
             // 
@@ -261,6 +273,7 @@
             this.btn_AgregarVuelo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_AgregarVuelo.Textcolor = System.Drawing.Color.White;
             this.btn_AgregarVuelo.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AgregarVuelo.Click += new System.EventHandler(this.btn_AgregarVuelo_Click);
             // 
             // txt_CodigoVuelo
             // 
@@ -340,21 +353,6 @@
             this.label1.TabIndex = 26;
             this.label1.Text = "Distancia";
             // 
-            // dt_Hora
-            // 
-            this.dt_Hora.Checked = false;
-            this.dt_Hora.Cursor = System.Windows.Forms.Cursors.Default;
-            this.dt_Hora.Enabled = false;
-            this.dt_Hora.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dt_Hora.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dt_Hora.Location = new System.Drawing.Point(415, 39);
-            this.dt_Hora.Margin = new System.Windows.Forms.Padding(4);
-            this.dt_Hora.Name = "dt_Hora";
-            this.dt_Hora.ShowUpDown = true;
-            this.dt_Hora.Size = new System.Drawing.Size(125, 22);
-            this.dt_Hora.TabIndex = 25;
-            this.dt_Hora.Visible = false;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -406,16 +404,16 @@
             this.cmb_NombreRuta.Size = new System.Drawing.Size(219, 24);
             this.cmb_NombreRuta.TabIndex = 21;
             // 
-            // dgv_vuelos_rutas
+            // dgv_Vuelos
             // 
-            this.dgv_vuelos_rutas.AllowUserToAddRows = false;
-            this.dgv_vuelos_rutas.AllowUserToDeleteRows = false;
+            this.dgv_Vuelos.AllowUserToAddRows = false;
+            this.dgv_Vuelos.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgv_vuelos_rutas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgv_vuelos_rutas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_vuelos_rutas.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.dgv_vuelos_rutas.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_vuelos_rutas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgv_Vuelos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_Vuelos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_Vuelos.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgv_Vuelos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_Vuelos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(130)))), ((int)(((byte)(232)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -423,66 +421,32 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_vuelos_rutas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_vuelos_rutas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_vuelos_rutas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_Vuelos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_Vuelos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Vuelos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clavevuelo,
             this.RUTA_vuelo,
             this.Fecha_vuelo,
             this.Hora_vuelo,
             this.Distancia_vuelo,
             this.Tiempo_vuelo,
             this.Avion_vuelo});
-            this.dgv_vuelos_rutas.DoubleBuffered = true;
-            this.dgv_vuelos_rutas.EnableHeadersVisualStyles = false;
-            this.dgv_vuelos_rutas.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(130)))), ((int)(((byte)(232)))));
-            this.dgv_vuelos_rutas.HeaderForeColor = System.Drawing.Color.White;
-            this.dgv_vuelos_rutas.Location = new System.Drawing.Point(4, 237);
-            this.dgv_vuelos_rutas.Margin = new System.Windows.Forms.Padding(4);
-            this.dgv_vuelos_rutas.Name = "dgv_vuelos_rutas";
-            this.dgv_vuelos_rutas.ReadOnly = true;
-            this.dgv_vuelos_rutas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgv_vuelos_rutas.Size = new System.Drawing.Size(1218, 444);
-            this.dgv_vuelos_rutas.TabIndex = 19;
-            // 
-            // RUTA_vuelo
-            // 
-            this.RUTA_vuelo.HeaderText = "Ruta";
-            this.RUTA_vuelo.Name = "RUTA_vuelo";
-            this.RUTA_vuelo.ReadOnly = true;
-            // 
-            // Fecha_vuelo
-            // 
-            this.Fecha_vuelo.HeaderText = "Fecha";
-            this.Fecha_vuelo.Name = "Fecha_vuelo";
-            this.Fecha_vuelo.ReadOnly = true;
-            // 
-            // Hora_vuelo
-            // 
-            this.Hora_vuelo.HeaderText = "Hora";
-            this.Hora_vuelo.Name = "Hora_vuelo";
-            this.Hora_vuelo.ReadOnly = true;
-            // 
-            // Distancia_vuelo
-            // 
-            this.Distancia_vuelo.HeaderText = "Distancia";
-            this.Distancia_vuelo.Name = "Distancia_vuelo";
-            this.Distancia_vuelo.ReadOnly = true;
-            // 
-            // Tiempo_vuelo
-            // 
-            this.Tiempo_vuelo.HeaderText = "Tiempo de vuelo";
-            this.Tiempo_vuelo.Name = "Tiempo_vuelo";
-            this.Tiempo_vuelo.ReadOnly = true;
-            // 
-            // Avion_vuelo
-            // 
-            this.Avion_vuelo.HeaderText = "Avion";
-            this.Avion_vuelo.Name = "Avion_vuelo";
-            this.Avion_vuelo.ReadOnly = true;
+            this.dgv_Vuelos.DoubleBuffered = true;
+            this.dgv_Vuelos.EnableHeadersVisualStyles = false;
+            this.dgv_Vuelos.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(130)))), ((int)(((byte)(232)))));
+            this.dgv_Vuelos.HeaderForeColor = System.Drawing.Color.White;
+            this.dgv_Vuelos.Location = new System.Drawing.Point(4, 237);
+            this.dgv_Vuelos.Margin = new System.Windows.Forms.Padding(4);
+            this.dgv_Vuelos.Name = "dgv_Vuelos";
+            this.dgv_Vuelos.ReadOnly = true;
+            this.dgv_Vuelos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgv_Vuelos.Size = new System.Drawing.Size(1218, 444);
+            this.dgv_Vuelos.TabIndex = 19;
+            this.dgv_Vuelos.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_Vuelos_CellMouseClick);
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.dgv_pais);
+            this.tabPage1.Controls.Add(this.dgv_Rutas);
             this.tabPage1.Controls.Add(this.bunifuCards1);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
@@ -492,16 +456,16 @@
             this.tabPage1.Text = "     Rutas    ";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // dgv_pais
+            // dgv_Rutas
             // 
-            this.dgv_pais.AllowUserToAddRows = false;
-            this.dgv_pais.AllowUserToDeleteRows = false;
+            this.dgv_Rutas.AllowUserToAddRows = false;
+            this.dgv_Rutas.AllowUserToDeleteRows = false;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgv_pais.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgv_pais.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_pais.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.dgv_pais.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_pais.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgv_Rutas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv_Rutas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_Rutas.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgv_Rutas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_Rutas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(130)))), ((int)(((byte)(232)))));
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -509,52 +473,66 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_pais.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgv_pais.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_pais.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_Rutas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgv_Rutas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Rutas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clave,
+            this.ruta,
             this.ORIGEN,
             this.DESTINO,
             this.distancia,
             this.tiempovuelo});
-            this.dgv_pais.DoubleBuffered = true;
-            this.dgv_pais.EnableHeadersVisualStyles = false;
-            this.dgv_pais.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(130)))), ((int)(((byte)(232)))));
-            this.dgv_pais.HeaderForeColor = System.Drawing.Color.White;
-            this.dgv_pais.Location = new System.Drawing.Point(4, 326);
-            this.dgv_pais.Margin = new System.Windows.Forms.Padding(4);
-            this.dgv_pais.Name = "dgv_pais";
-            this.dgv_pais.ReadOnly = true;
-            this.dgv_pais.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgv_pais.Size = new System.Drawing.Size(1213, 355);
-            this.dgv_pais.TabIndex = 7;
+            this.dgv_Rutas.DoubleBuffered = true;
+            this.dgv_Rutas.EnableHeadersVisualStyles = false;
+            this.dgv_Rutas.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(130)))), ((int)(((byte)(232)))));
+            this.dgv_Rutas.HeaderForeColor = System.Drawing.Color.White;
+            this.dgv_Rutas.Location = new System.Drawing.Point(4, 326);
+            this.dgv_Rutas.Margin = new System.Windows.Forms.Padding(4);
+            this.dgv_Rutas.Name = "dgv_Rutas";
+            this.dgv_Rutas.ReadOnly = true;
+            this.dgv_Rutas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgv_Rutas.Size = new System.Drawing.Size(1213, 355);
+            this.dgv_Rutas.TabIndex = 7;
+            this.dgv_Rutas.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_Rutas_CellMouseClick);
             // 
             // clave
             // 
+            this.clave.DataPropertyName = "id_ruta";
             this.clave.HeaderText = "Clave";
             this.clave.Name = "clave";
             this.clave.ReadOnly = true;
             // 
+            // ruta
+            // 
+            this.ruta.DataPropertyName = "nombre_ruta";
+            this.ruta.HeaderText = "Ruta";
+            this.ruta.Name = "ruta";
+            this.ruta.ReadOnly = true;
+            // 
             // ORIGEN
             // 
+            this.ORIGEN.DataPropertyName = "aeropuerto_origen";
             this.ORIGEN.HeaderText = "Origen";
             this.ORIGEN.Name = "ORIGEN";
             this.ORIGEN.ReadOnly = true;
             // 
             // DESTINO
             // 
+            this.DESTINO.DataPropertyName = "aeropuerto_destino";
             this.DESTINO.HeaderText = "Destino";
             this.DESTINO.Name = "DESTINO";
             this.DESTINO.ReadOnly = true;
             // 
             // distancia
             // 
+            this.distancia.DataPropertyName = "distancia";
             this.distancia.HeaderText = "Distancia";
             this.distancia.Name = "distancia";
             this.distancia.ReadOnly = true;
             // 
             // tiempovuelo
             // 
+            this.tiempovuelo.DataPropertyName = "tiempo";
             this.tiempovuelo.HeaderText = "Tiempo";
             this.tiempovuelo.Name = "tiempovuelo";
             this.tiempovuelo.ReadOnly = true;
@@ -740,6 +718,7 @@
             this.btn_EliminarRuta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_EliminarRuta.Textcolor = System.Drawing.Color.White;
             this.btn_EliminarRuta.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_EliminarRuta.Click += new System.EventHandler(this.btn_EliminarRuta_Click);
             // 
             // btn_ActualizarRuta
             // 
@@ -775,6 +754,7 @@
             this.btn_ActualizarRuta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_ActualizarRuta.Textcolor = System.Drawing.Color.White;
             this.btn_ActualizarRuta.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ActualizarRuta.Click += new System.EventHandler(this.btn_ActualizarRuta_Click);
             // 
             // btn_AgregarRuta
             // 
@@ -810,6 +790,56 @@
             this.btn_AgregarRuta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_AgregarRuta.Textcolor = System.Drawing.Color.White;
             this.btn_AgregarRuta.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AgregarRuta.Click += new System.EventHandler(this.btn_AgregarRuta_Click);
+            // 
+            // clavevuelo
+            // 
+            this.clavevuelo.DataPropertyName = "id_vuelo";
+            this.clavevuelo.HeaderText = "Clave";
+            this.clavevuelo.Name = "clavevuelo";
+            this.clavevuelo.ReadOnly = true;
+            // 
+            // RUTA_vuelo
+            // 
+            this.RUTA_vuelo.DataPropertyName = "nombre_ruta";
+            this.RUTA_vuelo.HeaderText = "Ruta";
+            this.RUTA_vuelo.Name = "RUTA_vuelo";
+            this.RUTA_vuelo.ReadOnly = true;
+            // 
+            // Fecha_vuelo
+            // 
+            this.Fecha_vuelo.DataPropertyName = "fecha_vuelo";
+            this.Fecha_vuelo.HeaderText = "Fecha";
+            this.Fecha_vuelo.Name = "Fecha_vuelo";
+            this.Fecha_vuelo.ReadOnly = true;
+            // 
+            // Hora_vuelo
+            // 
+            this.Hora_vuelo.DataPropertyName = "hora_vuelo";
+            this.Hora_vuelo.HeaderText = "Hora";
+            this.Hora_vuelo.Name = "Hora_vuelo";
+            this.Hora_vuelo.ReadOnly = true;
+            // 
+            // Distancia_vuelo
+            // 
+            this.Distancia_vuelo.DataPropertyName = "distancia_vuelo";
+            this.Distancia_vuelo.HeaderText = "Distancia";
+            this.Distancia_vuelo.Name = "Distancia_vuelo";
+            this.Distancia_vuelo.ReadOnly = true;
+            // 
+            // Tiempo_vuelo
+            // 
+            this.Tiempo_vuelo.DataPropertyName = "tiempo_vuelo";
+            this.Tiempo_vuelo.HeaderText = "Tiempo de vuelo";
+            this.Tiempo_vuelo.Name = "Tiempo_vuelo";
+            this.Tiempo_vuelo.ReadOnly = true;
+            // 
+            // Avion_vuelo
+            // 
+            this.Avion_vuelo.DataPropertyName = "nombre_avion";
+            this.Avion_vuelo.HeaderText = "Avion";
+            this.Avion_vuelo.Name = "Avion_vuelo";
+            this.Avion_vuelo.ReadOnly = true;
             // 
             // frm_Vuelos_Rutas
             // 
@@ -821,13 +851,14 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_Vuelos_Rutas";
             this.Text = "Vuelos_Rutas";
+            this.Load += new System.EventHandler(this.frm_Vuelos_Rutas_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.bunifuCards2.ResumeLayout(false);
             this.bunifuCards2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_vuelos_rutas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Vuelos)).EndInit();
             this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_pais)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Rutas)).EndInit();
             this.bunifuCards1.ResumeLayout(false);
             this.bunifuCards1.PerformLayout();
             this.ResumeLayout(false);
@@ -846,19 +877,12 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txt_DistanciaVuelo;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dt_Hora;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker dt_Fecha;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmb_NombreRuta;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid dgv_vuelos_rutas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RUTA_vuelo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha_vuelo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Hora_vuelo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Distancia_vuelo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tiempo_vuelo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Avion_vuelo;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid dgv_Vuelos;
         private System.Windows.Forms.TabPage tabPage1;
         private Bunifu.Framework.UI.BunifuCards bunifuCards1;
         private Bunifu.Framework.UI.BunifuFlatButton btn_EliminarRuta;
@@ -876,16 +900,25 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txt_TiempoRuta;
         private System.Windows.Forms.Label label11;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid dgv_pais;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clave;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ORIGEN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DESTINO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn distancia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tiempovuelo;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid dgv_Rutas;
         private System.Windows.Forms.TextBox txt_NombreRuta;
         private System.Windows.Forms.Label label5;
         private Bunifu.Framework.UI.BunifuFlatButton btn_EliminarVuelo;
         private Bunifu.Framework.UI.BunifuFlatButton btn_ActualizarVuelo;
         private Bunifu.Framework.UI.BunifuFlatButton btn_AgregarVuelo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clave;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ruta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ORIGEN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DESTINO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn distancia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tiempovuelo;
+        private System.Windows.Forms.TextBox txt_HoraVuelo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clavevuelo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RUTA_vuelo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha_vuelo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Hora_vuelo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Distancia_vuelo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tiempo_vuelo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Avion_vuelo;
     }
 }

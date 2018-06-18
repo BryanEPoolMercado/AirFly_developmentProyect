@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BO\Aeropuerto_BO.cs" />
+    <Compile Include="BO\Avion_BO.cs" />
+    <Compile Include="BO\Ciudad_BO.cs" />
+    <Compile Include="BO\Rutas_BO.cs" />
+    <Compile Include="BO\Usuarios_BO.cs" />
+    <Compile Include="BO\Vuelos_BO.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Modelo\Aerolinea.cs">
       <DependentUpon>Airfly_Entidades.tt</DependentUpon>

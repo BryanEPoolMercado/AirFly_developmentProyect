@@ -32,7 +32,9 @@ namespace Aerolineas_AirFly.GUI
         }
         private void btn_inicio_Click(object sender, EventArgs e)
         {
-            //Abre el panel y reasigna icono
+            
+            AbrirFormulario(new frm_FondoPantalla());
+
             pnl_catalogos_dock.Visible = false;
             btn_catalogos.Location = new Point(0, 275);
 

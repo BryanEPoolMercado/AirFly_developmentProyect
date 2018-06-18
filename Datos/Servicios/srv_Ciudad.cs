@@ -4,21 +4,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Datos.Modelo;
+using Datos.BO;
 
 namespace Datos.Servicios
 {
     public class srv_Ciudad
-    {
-        //listar
-        public List<Ciudad> GetListCiudad()
+    {       
+        //Listar
+        private AirFly_Modelo modeloCiudad;
+        public List<Ciudad_BO> GetListaCiudad()
         {
-            List<Ciudad> objCiudad = new List<Ciudad>();
-            using (var db = new AirFly_Modelo())
-            {
-                objCiudad = db.Ciudad.ToList();
-                return objCiudad;
-            }
+            modeloCiudad = new AirFly_Modelo();
+            var selectPais = (from ciu in modeloCiudad.Ciudad
+                              join pai in modeloCiudad.Pais on ciu.id_pais equals pai.id_pais
+
+                              select new Ciudad_BO
+                              {
+                                  id_ciudad = ciu.id_ciudad,
+                                  nombre_ciudad = ciu.nombre_ciudad,
+                                  nombre_pais = pai.nombre_pais,
+
+                              }).ToList();
+            return selectPais;
         }
+
         //agregar
         public void AgregarCiudad(Ciudad item)
         {

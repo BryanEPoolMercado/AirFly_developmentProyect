@@ -4,20 +4,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Datos.Modelo;
+using Datos.BO;
 
 namespace Datos.Servicios
 {
     public class srv_Ruta
     {
         //list
-        public List<Ruta> GetListAerolinea()
+        private AirFly_Modelo modeloRuta;
+        public List<Rutas_BO> GetListaRuta()
         {
-            List<Ruta> objRuta = new List<Ruta>();
-            using (var db = new AirFly_Modelo())
-            {
-                objRuta = db.Ruta.ToList();
-                return objRuta;
-            }
+            modeloRuta = new AirFly_Modelo();
+            var selectRuta = (from rut in modeloRuta.Ruta
+                              join aeropuer in modeloRuta.Aeropuerto on rut.aeropuerto_origen equals aeropuer.id_aeropuerto
+
+                              select new Rutas_BO
+                              {
+                                  id_ruta = rut.id_ruta,
+                                  nombre_ruta = rut.nombre_ruta,
+                                  distancia = rut.distancia,
+                                  tiempo = rut.tiempo,
+                                  aeropuerto_origen = aeropuer.nombre_aeropuerto,
+                                  aeropuerto_destino=aeropuer.nombre_aeropuerto,
+
+                              }).ToList();
+            return selectRuta;
         }
         //add
         public void AgregarRuta(Ruta item)

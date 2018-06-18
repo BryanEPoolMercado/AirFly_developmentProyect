@@ -4,23 +4,34 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Datos.Modelo;
+using Datos.BO;
 
 namespace Datos.Servicios
 {
     public class srv_Usuarios
     {
         //list
-        public List<Usuario> GetListUsuario()
+        private AirFly_Modelo modeloUsuario;
+        public List<Usuarios_BO> GetListaUsuario()
         {
-            List<Usuario> objusuario = new List<Usuario>();
-            using (var db = new AirFly_Modelo())
-            {
-                objusuario = db.Usuario.ToList();
-                return objusuario;
-            }
+            modeloUsuario = new AirFly_Modelo();
+            var selecUsuario = (from us in modeloUsuario.Usuario
+                                join per in modeloUsuario.Perfil on us.id_perfil equals per.id_perfil
+
+                                select new Usuarios_BO
+                                {
+                                    id_usuario = us.id_usuario,
+                                    nombre_usuario = us.nombre_usuario,
+                                    apellidopat_usuario = us.apellidopat_usuario,
+                                    apellidomat_usuario = us.apellidomat_usuario,
+                                    correo_usuario = us.correo_usuario,
+                                    contraseña_usuario = us.contraseña_usuario,
+                                    nombre_perfil = per.nombre_perfil,
+                              }).ToList();
+            return selecUsuario;
         }
         //add
-        public void AddUsuario(Usuario item)
+        public void AgregarUsuario(Usuario item)
         {
             try
             {

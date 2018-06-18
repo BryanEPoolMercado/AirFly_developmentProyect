@@ -28,17 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_PaisesCiudades));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_PaisesCiudades));
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.bunifuCards2 = new Bunifu.Framework.UI.BunifuCards();
+            this.btn_EliminarPais = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_ModificarPais = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_AgregarPais = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txt_cod_pais = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_nombrePais = new System.Windows.Forms.TextBox();
@@ -48,6 +51,9 @@
             this.Nombre_pais = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
+            this.btn_EliminarCiudad = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_ActualizarCiudad = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_AgregarCiudad = new Bunifu.Framework.UI.BunifuFlatButton();
             this.cmb_NombrePais = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_CodigoCiudad = new System.Windows.Forms.TextBox();
@@ -55,27 +61,21 @@
             this.txt_NombreCiudad = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.dgv_ciudad = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.id_Ciudad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idpais = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre_ciudad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dgv_Aeropuertos = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.bunifuCards3 = new Bunifu.Framework.UI.BunifuCards();
+            this.btn_EliminarAeropuerto = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_ActualizarAeropuerto = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_AgregarAeropuerto = new Bunifu.Framework.UI.BunifuFlatButton();
             this.cmb_Ciudad = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_CodigoAeropuerto = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_NombreAeropuerto = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.dgv_Aeropuertos = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.btn_EliminarAeropuerto = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btn_ActualizarAeropuerto = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btn_AgregarAeropuerto = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btn_EliminarCiudad = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btn_ActualizarCiudad = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btn_AgregarCiudad = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btn_EliminarPais = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btn_ModificarPais = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btn_AgregarPais = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.id_Ciudad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idpais = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre_ciudad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clave = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ciudad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aeropuerto = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -87,8 +87,8 @@
             this.bunifuCards1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ciudad)).BeginInit();
             this.tabPage3.SuspendLayout();
-            this.bunifuCards3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Aeropuertos)).BeginInit();
+            this.bunifuCards3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -146,6 +146,114 @@
             this.bunifuCards2.ShadowDepth = 20;
             this.bunifuCards2.Size = new System.Drawing.Size(1213, 275);
             this.bunifuCards2.TabIndex = 5;
+            // 
+            // btn_EliminarPais
+            // 
+            this.btn_EliminarPais.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_EliminarPais.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(130)))), ((int)(((byte)(232)))));
+            this.btn_EliminarPais.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_EliminarPais.BorderRadius = 0;
+            this.btn_EliminarPais.ButtonText = "Eliminar";
+            this.btn_EliminarPais.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_EliminarPais.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_EliminarPais.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_EliminarPais.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_EliminarPais.Iconimage")));
+            this.btn_EliminarPais.Iconimage_right = null;
+            this.btn_EliminarPais.Iconimage_right_Selected = null;
+            this.btn_EliminarPais.Iconimage_Selected = null;
+            this.btn_EliminarPais.IconMarginLeft = 0;
+            this.btn_EliminarPais.IconMarginRight = 0;
+            this.btn_EliminarPais.IconRightVisible = false;
+            this.btn_EliminarPais.IconRightZoom = 0D;
+            this.btn_EliminarPais.IconVisible = false;
+            this.btn_EliminarPais.IconZoom = 40D;
+            this.btn_EliminarPais.IsTab = false;
+            this.btn_EliminarPais.Location = new System.Drawing.Point(704, 209);
+            this.btn_EliminarPais.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_EliminarPais.Name = "btn_EliminarPais";
+            this.btn_EliminarPais.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(130)))), ((int)(((byte)(232)))));
+            this.btn_EliminarPais.OnHovercolor = System.Drawing.Color.Crimson;
+            this.btn_EliminarPais.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_EliminarPais.selected = false;
+            this.btn_EliminarPais.Size = new System.Drawing.Size(149, 33);
+            this.btn_EliminarPais.TabIndex = 28;
+            this.btn_EliminarPais.Text = "Eliminar";
+            this.btn_EliminarPais.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_EliminarPais.Textcolor = System.Drawing.Color.White;
+            this.btn_EliminarPais.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_EliminarPais.Click += new System.EventHandler(this.btn_EliminarPais_Click);
+            // 
+            // btn_ModificarPais
+            // 
+            this.btn_ModificarPais.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_ModificarPais.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(130)))), ((int)(((byte)(232)))));
+            this.btn_ModificarPais.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_ModificarPais.BorderRadius = 0;
+            this.btn_ModificarPais.ButtonText = "Actualizar";
+            this.btn_ModificarPais.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_ModificarPais.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_ModificarPais.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_ModificarPais.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_ModificarPais.Iconimage")));
+            this.btn_ModificarPais.Iconimage_right = null;
+            this.btn_ModificarPais.Iconimage_right_Selected = null;
+            this.btn_ModificarPais.Iconimage_Selected = null;
+            this.btn_ModificarPais.IconMarginLeft = 0;
+            this.btn_ModificarPais.IconMarginRight = 0;
+            this.btn_ModificarPais.IconRightVisible = false;
+            this.btn_ModificarPais.IconRightZoom = 0D;
+            this.btn_ModificarPais.IconVisible = false;
+            this.btn_ModificarPais.IconZoom = 40D;
+            this.btn_ModificarPais.IsTab = false;
+            this.btn_ModificarPais.Location = new System.Drawing.Point(523, 209);
+            this.btn_ModificarPais.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_ModificarPais.Name = "btn_ModificarPais";
+            this.btn_ModificarPais.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(130)))), ((int)(((byte)(232)))));
+            this.btn_ModificarPais.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(141)))), ((int)(((byte)(255)))));
+            this.btn_ModificarPais.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_ModificarPais.selected = false;
+            this.btn_ModificarPais.Size = new System.Drawing.Size(149, 33);
+            this.btn_ModificarPais.TabIndex = 27;
+            this.btn_ModificarPais.Text = "Actualizar";
+            this.btn_ModificarPais.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_ModificarPais.Textcolor = System.Drawing.Color.White;
+            this.btn_ModificarPais.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ModificarPais.Click += new System.EventHandler(this.btn_ModificarPais_Click);
+            // 
+            // btn_AgregarPais
+            // 
+            this.btn_AgregarPais.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_AgregarPais.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(130)))), ((int)(((byte)(232)))));
+            this.btn_AgregarPais.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_AgregarPais.BorderRadius = 0;
+            this.btn_AgregarPais.ButtonText = "Agregar";
+            this.btn_AgregarPais.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_AgregarPais.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_AgregarPais.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_AgregarPais.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_AgregarPais.Iconimage")));
+            this.btn_AgregarPais.Iconimage_right = null;
+            this.btn_AgregarPais.Iconimage_right_Selected = null;
+            this.btn_AgregarPais.Iconimage_Selected = null;
+            this.btn_AgregarPais.IconMarginLeft = 0;
+            this.btn_AgregarPais.IconMarginRight = 0;
+            this.btn_AgregarPais.IconRightVisible = false;
+            this.btn_AgregarPais.IconRightZoom = 0D;
+            this.btn_AgregarPais.IconVisible = false;
+            this.btn_AgregarPais.IconZoom = 40D;
+            this.btn_AgregarPais.IsTab = false;
+            this.btn_AgregarPais.Location = new System.Drawing.Point(343, 209);
+            this.btn_AgregarPais.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_AgregarPais.Name = "btn_AgregarPais";
+            this.btn_AgregarPais.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(130)))), ((int)(((byte)(232)))));
+            this.btn_AgregarPais.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(203)))), ((int)(((byte)(104)))));
+            this.btn_AgregarPais.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_AgregarPais.selected = false;
+            this.btn_AgregarPais.Size = new System.Drawing.Size(149, 33);
+            this.btn_AgregarPais.TabIndex = 26;
+            this.btn_AgregarPais.Text = "Agregar";
+            this.btn_AgregarPais.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_AgregarPais.Textcolor = System.Drawing.Color.White;
+            this.btn_AgregarPais.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AgregarPais.Click += new System.EventHandler(this.btn_AgregarPais_Click);
             // 
             // txt_cod_pais
             // 
@@ -271,6 +379,114 @@
             this.bunifuCards1.Size = new System.Drawing.Size(1215, 292);
             this.bunifuCards1.TabIndex = 6;
             // 
+            // btn_EliminarCiudad
+            // 
+            this.btn_EliminarCiudad.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_EliminarCiudad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(130)))), ((int)(((byte)(232)))));
+            this.btn_EliminarCiudad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_EliminarCiudad.BorderRadius = 0;
+            this.btn_EliminarCiudad.ButtonText = "Eliminar";
+            this.btn_EliminarCiudad.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_EliminarCiudad.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_EliminarCiudad.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_EliminarCiudad.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_EliminarCiudad.Iconimage")));
+            this.btn_EliminarCiudad.Iconimage_right = null;
+            this.btn_EliminarCiudad.Iconimage_right_Selected = null;
+            this.btn_EliminarCiudad.Iconimage_Selected = null;
+            this.btn_EliminarCiudad.IconMarginLeft = 0;
+            this.btn_EliminarCiudad.IconMarginRight = 0;
+            this.btn_EliminarCiudad.IconRightVisible = false;
+            this.btn_EliminarCiudad.IconRightZoom = 0D;
+            this.btn_EliminarCiudad.IconVisible = false;
+            this.btn_EliminarCiudad.IconZoom = 40D;
+            this.btn_EliminarCiudad.IsTab = false;
+            this.btn_EliminarCiudad.Location = new System.Drawing.Point(706, 211);
+            this.btn_EliminarCiudad.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_EliminarCiudad.Name = "btn_EliminarCiudad";
+            this.btn_EliminarCiudad.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(130)))), ((int)(((byte)(232)))));
+            this.btn_EliminarCiudad.OnHovercolor = System.Drawing.Color.Crimson;
+            this.btn_EliminarCiudad.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_EliminarCiudad.selected = false;
+            this.btn_EliminarCiudad.Size = new System.Drawing.Size(149, 33);
+            this.btn_EliminarCiudad.TabIndex = 28;
+            this.btn_EliminarCiudad.Text = "Eliminar";
+            this.btn_EliminarCiudad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_EliminarCiudad.Textcolor = System.Drawing.Color.White;
+            this.btn_EliminarCiudad.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_EliminarCiudad.Click += new System.EventHandler(this.btn_EliminarCiudad_Click);
+            // 
+            // btn_ActualizarCiudad
+            // 
+            this.btn_ActualizarCiudad.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_ActualizarCiudad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(130)))), ((int)(((byte)(232)))));
+            this.btn_ActualizarCiudad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_ActualizarCiudad.BorderRadius = 0;
+            this.btn_ActualizarCiudad.ButtonText = "Actualizar";
+            this.btn_ActualizarCiudad.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_ActualizarCiudad.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_ActualizarCiudad.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_ActualizarCiudad.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_ActualizarCiudad.Iconimage")));
+            this.btn_ActualizarCiudad.Iconimage_right = null;
+            this.btn_ActualizarCiudad.Iconimage_right_Selected = null;
+            this.btn_ActualizarCiudad.Iconimage_Selected = null;
+            this.btn_ActualizarCiudad.IconMarginLeft = 0;
+            this.btn_ActualizarCiudad.IconMarginRight = 0;
+            this.btn_ActualizarCiudad.IconRightVisible = false;
+            this.btn_ActualizarCiudad.IconRightZoom = 0D;
+            this.btn_ActualizarCiudad.IconVisible = false;
+            this.btn_ActualizarCiudad.IconZoom = 40D;
+            this.btn_ActualizarCiudad.IsTab = false;
+            this.btn_ActualizarCiudad.Location = new System.Drawing.Point(525, 211);
+            this.btn_ActualizarCiudad.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_ActualizarCiudad.Name = "btn_ActualizarCiudad";
+            this.btn_ActualizarCiudad.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(130)))), ((int)(((byte)(232)))));
+            this.btn_ActualizarCiudad.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(141)))), ((int)(((byte)(255)))));
+            this.btn_ActualizarCiudad.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_ActualizarCiudad.selected = false;
+            this.btn_ActualizarCiudad.Size = new System.Drawing.Size(149, 33);
+            this.btn_ActualizarCiudad.TabIndex = 27;
+            this.btn_ActualizarCiudad.Text = "Actualizar";
+            this.btn_ActualizarCiudad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_ActualizarCiudad.Textcolor = System.Drawing.Color.White;
+            this.btn_ActualizarCiudad.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ActualizarCiudad.Click += new System.EventHandler(this.btn_ActualizarCiudad_Click);
+            // 
+            // btn_AgregarCiudad
+            // 
+            this.btn_AgregarCiudad.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_AgregarCiudad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(130)))), ((int)(((byte)(232)))));
+            this.btn_AgregarCiudad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_AgregarCiudad.BorderRadius = 0;
+            this.btn_AgregarCiudad.ButtonText = "Agregar";
+            this.btn_AgregarCiudad.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_AgregarCiudad.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_AgregarCiudad.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_AgregarCiudad.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_AgregarCiudad.Iconimage")));
+            this.btn_AgregarCiudad.Iconimage_right = null;
+            this.btn_AgregarCiudad.Iconimage_right_Selected = null;
+            this.btn_AgregarCiudad.Iconimage_Selected = null;
+            this.btn_AgregarCiudad.IconMarginLeft = 0;
+            this.btn_AgregarCiudad.IconMarginRight = 0;
+            this.btn_AgregarCiudad.IconRightVisible = false;
+            this.btn_AgregarCiudad.IconRightZoom = 0D;
+            this.btn_AgregarCiudad.IconVisible = false;
+            this.btn_AgregarCiudad.IconZoom = 40D;
+            this.btn_AgregarCiudad.IsTab = false;
+            this.btn_AgregarCiudad.Location = new System.Drawing.Point(345, 211);
+            this.btn_AgregarCiudad.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_AgregarCiudad.Name = "btn_AgregarCiudad";
+            this.btn_AgregarCiudad.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(130)))), ((int)(((byte)(232)))));
+            this.btn_AgregarCiudad.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(203)))), ((int)(((byte)(104)))));
+            this.btn_AgregarCiudad.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_AgregarCiudad.selected = false;
+            this.btn_AgregarCiudad.Size = new System.Drawing.Size(149, 33);
+            this.btn_AgregarCiudad.TabIndex = 26;
+            this.btn_AgregarCiudad.Text = "Agregar";
+            this.btn_AgregarCiudad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_AgregarCiudad.Textcolor = System.Drawing.Color.White;
+            this.btn_AgregarCiudad.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AgregarCiudad.Click += new System.EventHandler(this.btn_AgregarCiudad_Click);
+            // 
             // cmb_NombrePais
             // 
             this.cmb_NombrePais.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -365,27 +581,6 @@
             this.dgv_ciudad.TabIndex = 2;
             this.dgv_ciudad.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_ciudad_CellMouseClick);
             // 
-            // id_Ciudad
-            // 
-            this.id_Ciudad.DataPropertyName = "id_ciudad";
-            this.id_Ciudad.HeaderText = "Clave";
-            this.id_Ciudad.Name = "id_Ciudad";
-            this.id_Ciudad.ReadOnly = true;
-            // 
-            // idpais
-            // 
-            this.idpais.DataPropertyName = "id_pais";
-            this.idpais.HeaderText = "Pais";
-            this.idpais.Name = "idpais";
-            this.idpais.ReadOnly = true;
-            // 
-            // Nombre_ciudad
-            // 
-            this.Nombre_ciudad.DataPropertyName = "nombre_ciudad";
-            this.Nombre_ciudad.HeaderText = "Ciudad";
-            this.Nombre_ciudad.Name = "Nombre_ciudad";
-            this.Nombre_ciudad.ReadOnly = true;
-            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.dgv_Aeropuertos);
@@ -397,89 +592,6 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "     Aeropuertos     ";
             this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // bunifuCards3
-            // 
-            this.bunifuCards3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.bunifuCards3.BackColor = System.Drawing.Color.White;
-            this.bunifuCards3.BorderRadius = 5;
-            this.bunifuCards3.BottomSahddow = true;
-            this.bunifuCards3.color = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(115)))), ((int)(((byte)(166)))));
-            this.bunifuCards3.Controls.Add(this.btn_EliminarAeropuerto);
-            this.bunifuCards3.Controls.Add(this.btn_ActualizarAeropuerto);
-            this.bunifuCards3.Controls.Add(this.btn_AgregarAeropuerto);
-            this.bunifuCards3.Controls.Add(this.cmb_Ciudad);
-            this.bunifuCards3.Controls.Add(this.label1);
-            this.bunifuCards3.Controls.Add(this.txt_CodigoAeropuerto);
-            this.bunifuCards3.Controls.Add(this.label5);
-            this.bunifuCards3.Controls.Add(this.txt_NombreAeropuerto);
-            this.bunifuCards3.Controls.Add(this.label6);
-            this.bunifuCards3.LeftSahddow = false;
-            this.bunifuCards3.Location = new System.Drawing.Point(4, 7);
-            this.bunifuCards3.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuCards3.Name = "bunifuCards3";
-            this.bunifuCards3.RightSahddow = true;
-            this.bunifuCards3.ShadowDepth = 20;
-            this.bunifuCards3.Size = new System.Drawing.Size(1215, 292);
-            this.bunifuCards3.TabIndex = 7;
-            // 
-            // cmb_Ciudad
-            // 
-            this.cmb_Ciudad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmb_Ciudad.FormattingEnabled = true;
-            this.cmb_Ciudad.Location = new System.Drawing.Point(411, 66);
-            this.cmb_Ciudad.Name = "cmb_Ciudad";
-            this.cmb_Ciudad.Size = new System.Drawing.Size(319, 24);
-            this.cmb_Ciudad.TabIndex = 22;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(338, 67);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 19);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "Ciudad:";
-            // 
-            // txt_CodigoAeropuerto
-            // 
-            this.txt_CodigoAeropuerto.Location = new System.Drawing.Point(260, 66);
-            this.txt_CodigoAeropuerto.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_CodigoAeropuerto.Name = "txt_CodigoAeropuerto";
-            this.txt_CodigoAeropuerto.Size = new System.Drawing.Size(51, 22);
-            this.txt_CodigoAeropuerto.TabIndex = 20;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(188, 66);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 19);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "Codigo:";
-            // 
-            // txt_NombreAeropuerto
-            // 
-            this.txt_NombreAeropuerto.Location = new System.Drawing.Point(411, 134);
-            this.txt_NombreAeropuerto.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_NombreAeropuerto.Name = "txt_NombreAeropuerto";
-            this.txt_NombreAeropuerto.Size = new System.Drawing.Size(320, 22);
-            this.txt_NombreAeropuerto.TabIndex = 7;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(219, 134);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(176, 19);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Nombre del aeropuerto:";
             // 
             // dgv_Aeropuertos
             // 
@@ -516,6 +628,31 @@
             this.dgv_Aeropuertos.Size = new System.Drawing.Size(1213, 371);
             this.dgv_Aeropuertos.TabIndex = 8;
             this.dgv_Aeropuertos.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_Aeropuertos_CellMouseClick);
+            // 
+            // bunifuCards3
+            // 
+            this.bunifuCards3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.bunifuCards3.BackColor = System.Drawing.Color.White;
+            this.bunifuCards3.BorderRadius = 5;
+            this.bunifuCards3.BottomSahddow = true;
+            this.bunifuCards3.color = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(115)))), ((int)(((byte)(166)))));
+            this.bunifuCards3.Controls.Add(this.btn_EliminarAeropuerto);
+            this.bunifuCards3.Controls.Add(this.btn_ActualizarAeropuerto);
+            this.bunifuCards3.Controls.Add(this.btn_AgregarAeropuerto);
+            this.bunifuCards3.Controls.Add(this.cmb_Ciudad);
+            this.bunifuCards3.Controls.Add(this.label1);
+            this.bunifuCards3.Controls.Add(this.txt_CodigoAeropuerto);
+            this.bunifuCards3.Controls.Add(this.label5);
+            this.bunifuCards3.Controls.Add(this.txt_NombreAeropuerto);
+            this.bunifuCards3.Controls.Add(this.label6);
+            this.bunifuCards3.LeftSahddow = false;
+            this.bunifuCards3.Location = new System.Drawing.Point(4, 7);
+            this.bunifuCards3.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuCards3.Name = "bunifuCards3";
+            this.bunifuCards3.RightSahddow = true;
+            this.bunifuCards3.ShadowDepth = 20;
+            this.bunifuCards3.Size = new System.Drawing.Size(1215, 292);
+            this.bunifuCards3.TabIndex = 7;
             // 
             // btn_EliminarAeropuerto
             // 
@@ -625,221 +762,84 @@
             this.btn_AgregarAeropuerto.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_AgregarAeropuerto.Click += new System.EventHandler(this.btn_AgregarAeropuerto_Click);
             // 
-            // btn_EliminarCiudad
+            // cmb_Ciudad
             // 
-            this.btn_EliminarCiudad.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btn_EliminarCiudad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(130)))), ((int)(((byte)(232)))));
-            this.btn_EliminarCiudad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_EliminarCiudad.BorderRadius = 0;
-            this.btn_EliminarCiudad.ButtonText = "Eliminar";
-            this.btn_EliminarCiudad.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_EliminarCiudad.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_EliminarCiudad.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_EliminarCiudad.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_EliminarCiudad.Iconimage")));
-            this.btn_EliminarCiudad.Iconimage_right = null;
-            this.btn_EliminarCiudad.Iconimage_right_Selected = null;
-            this.btn_EliminarCiudad.Iconimage_Selected = null;
-            this.btn_EliminarCiudad.IconMarginLeft = 0;
-            this.btn_EliminarCiudad.IconMarginRight = 0;
-            this.btn_EliminarCiudad.IconRightVisible = false;
-            this.btn_EliminarCiudad.IconRightZoom = 0D;
-            this.btn_EliminarCiudad.IconVisible = false;
-            this.btn_EliminarCiudad.IconZoom = 40D;
-            this.btn_EliminarCiudad.IsTab = false;
-            this.btn_EliminarCiudad.Location = new System.Drawing.Point(706, 211);
-            this.btn_EliminarCiudad.Margin = new System.Windows.Forms.Padding(5);
-            this.btn_EliminarCiudad.Name = "btn_EliminarCiudad";
-            this.btn_EliminarCiudad.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(130)))), ((int)(((byte)(232)))));
-            this.btn_EliminarCiudad.OnHovercolor = System.Drawing.Color.Crimson;
-            this.btn_EliminarCiudad.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_EliminarCiudad.selected = false;
-            this.btn_EliminarCiudad.Size = new System.Drawing.Size(149, 33);
-            this.btn_EliminarCiudad.TabIndex = 28;
-            this.btn_EliminarCiudad.Text = "Eliminar";
-            this.btn_EliminarCiudad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_EliminarCiudad.Textcolor = System.Drawing.Color.White;
-            this.btn_EliminarCiudad.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_EliminarCiudad.Click += new System.EventHandler(this.btn_EliminarCiudad_Click);
+            this.cmb_Ciudad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_Ciudad.FormattingEnabled = true;
+            this.cmb_Ciudad.Location = new System.Drawing.Point(411, 66);
+            this.cmb_Ciudad.Name = "cmb_Ciudad";
+            this.cmb_Ciudad.Size = new System.Drawing.Size(319, 24);
+            this.cmb_Ciudad.TabIndex = 22;
             // 
-            // btn_ActualizarCiudad
+            // label1
             // 
-            this.btn_ActualizarCiudad.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btn_ActualizarCiudad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(130)))), ((int)(((byte)(232)))));
-            this.btn_ActualizarCiudad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_ActualizarCiudad.BorderRadius = 0;
-            this.btn_ActualizarCiudad.ButtonText = "Actualizar";
-            this.btn_ActualizarCiudad.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_ActualizarCiudad.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_ActualizarCiudad.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_ActualizarCiudad.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_ActualizarCiudad.Iconimage")));
-            this.btn_ActualizarCiudad.Iconimage_right = null;
-            this.btn_ActualizarCiudad.Iconimage_right_Selected = null;
-            this.btn_ActualizarCiudad.Iconimage_Selected = null;
-            this.btn_ActualizarCiudad.IconMarginLeft = 0;
-            this.btn_ActualizarCiudad.IconMarginRight = 0;
-            this.btn_ActualizarCiudad.IconRightVisible = false;
-            this.btn_ActualizarCiudad.IconRightZoom = 0D;
-            this.btn_ActualizarCiudad.IconVisible = false;
-            this.btn_ActualizarCiudad.IconZoom = 40D;
-            this.btn_ActualizarCiudad.IsTab = false;
-            this.btn_ActualizarCiudad.Location = new System.Drawing.Point(525, 211);
-            this.btn_ActualizarCiudad.Margin = new System.Windows.Forms.Padding(5);
-            this.btn_ActualizarCiudad.Name = "btn_ActualizarCiudad";
-            this.btn_ActualizarCiudad.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(130)))), ((int)(((byte)(232)))));
-            this.btn_ActualizarCiudad.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(141)))), ((int)(((byte)(255)))));
-            this.btn_ActualizarCiudad.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_ActualizarCiudad.selected = false;
-            this.btn_ActualizarCiudad.Size = new System.Drawing.Size(149, 33);
-            this.btn_ActualizarCiudad.TabIndex = 27;
-            this.btn_ActualizarCiudad.Text = "Actualizar";
-            this.btn_ActualizarCiudad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_ActualizarCiudad.Textcolor = System.Drawing.Color.White;
-            this.btn_ActualizarCiudad.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ActualizarCiudad.Click += new System.EventHandler(this.btn_ActualizarCiudad_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(338, 67);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 19);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Ciudad:";
             // 
-            // btn_AgregarCiudad
+            // txt_CodigoAeropuerto
             // 
-            this.btn_AgregarCiudad.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btn_AgregarCiudad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(130)))), ((int)(((byte)(232)))));
-            this.btn_AgregarCiudad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_AgregarCiudad.BorderRadius = 0;
-            this.btn_AgregarCiudad.ButtonText = "Agregar";
-            this.btn_AgregarCiudad.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_AgregarCiudad.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_AgregarCiudad.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_AgregarCiudad.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_AgregarCiudad.Iconimage")));
-            this.btn_AgregarCiudad.Iconimage_right = null;
-            this.btn_AgregarCiudad.Iconimage_right_Selected = null;
-            this.btn_AgregarCiudad.Iconimage_Selected = null;
-            this.btn_AgregarCiudad.IconMarginLeft = 0;
-            this.btn_AgregarCiudad.IconMarginRight = 0;
-            this.btn_AgregarCiudad.IconRightVisible = false;
-            this.btn_AgregarCiudad.IconRightZoom = 0D;
-            this.btn_AgregarCiudad.IconVisible = false;
-            this.btn_AgregarCiudad.IconZoom = 40D;
-            this.btn_AgregarCiudad.IsTab = false;
-            this.btn_AgregarCiudad.Location = new System.Drawing.Point(345, 211);
-            this.btn_AgregarCiudad.Margin = new System.Windows.Forms.Padding(5);
-            this.btn_AgregarCiudad.Name = "btn_AgregarCiudad";
-            this.btn_AgregarCiudad.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(130)))), ((int)(((byte)(232)))));
-            this.btn_AgregarCiudad.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(203)))), ((int)(((byte)(104)))));
-            this.btn_AgregarCiudad.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_AgregarCiudad.selected = false;
-            this.btn_AgregarCiudad.Size = new System.Drawing.Size(149, 33);
-            this.btn_AgregarCiudad.TabIndex = 26;
-            this.btn_AgregarCiudad.Text = "Agregar";
-            this.btn_AgregarCiudad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_AgregarCiudad.Textcolor = System.Drawing.Color.White;
-            this.btn_AgregarCiudad.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_AgregarCiudad.Click += new System.EventHandler(this.btn_AgregarCiudad_Click);
+            this.txt_CodigoAeropuerto.Location = new System.Drawing.Point(260, 66);
+            this.txt_CodigoAeropuerto.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_CodigoAeropuerto.Name = "txt_CodigoAeropuerto";
+            this.txt_CodigoAeropuerto.Size = new System.Drawing.Size(51, 22);
+            this.txt_CodigoAeropuerto.TabIndex = 20;
             // 
-            // btn_EliminarPais
+            // label5
             // 
-            this.btn_EliminarPais.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btn_EliminarPais.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(130)))), ((int)(((byte)(232)))));
-            this.btn_EliminarPais.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_EliminarPais.BorderRadius = 0;
-            this.btn_EliminarPais.ButtonText = "Eliminar";
-            this.btn_EliminarPais.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_EliminarPais.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_EliminarPais.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_EliminarPais.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_EliminarPais.Iconimage")));
-            this.btn_EliminarPais.Iconimage_right = null;
-            this.btn_EliminarPais.Iconimage_right_Selected = null;
-            this.btn_EliminarPais.Iconimage_Selected = null;
-            this.btn_EliminarPais.IconMarginLeft = 0;
-            this.btn_EliminarPais.IconMarginRight = 0;
-            this.btn_EliminarPais.IconRightVisible = false;
-            this.btn_EliminarPais.IconRightZoom = 0D;
-            this.btn_EliminarPais.IconVisible = false;
-            this.btn_EliminarPais.IconZoom = 40D;
-            this.btn_EliminarPais.IsTab = false;
-            this.btn_EliminarPais.Location = new System.Drawing.Point(704, 209);
-            this.btn_EliminarPais.Margin = new System.Windows.Forms.Padding(5);
-            this.btn_EliminarPais.Name = "btn_EliminarPais";
-            this.btn_EliminarPais.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(130)))), ((int)(((byte)(232)))));
-            this.btn_EliminarPais.OnHovercolor = System.Drawing.Color.Crimson;
-            this.btn_EliminarPais.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_EliminarPais.selected = false;
-            this.btn_EliminarPais.Size = new System.Drawing.Size(149, 33);
-            this.btn_EliminarPais.TabIndex = 28;
-            this.btn_EliminarPais.Text = "Eliminar";
-            this.btn_EliminarPais.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_EliminarPais.Textcolor = System.Drawing.Color.White;
-            this.btn_EliminarPais.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_EliminarPais.Click += new System.EventHandler(this.btn_EliminarPais_Click);
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(188, 66);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(64, 19);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Codigo:";
             // 
-            // btn_ModificarPais
+            // txt_NombreAeropuerto
             // 
-            this.btn_ModificarPais.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btn_ModificarPais.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(130)))), ((int)(((byte)(232)))));
-            this.btn_ModificarPais.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_ModificarPais.BorderRadius = 0;
-            this.btn_ModificarPais.ButtonText = "Actualizar";
-            this.btn_ModificarPais.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_ModificarPais.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_ModificarPais.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_ModificarPais.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_ModificarPais.Iconimage")));
-            this.btn_ModificarPais.Iconimage_right = null;
-            this.btn_ModificarPais.Iconimage_right_Selected = null;
-            this.btn_ModificarPais.Iconimage_Selected = null;
-            this.btn_ModificarPais.IconMarginLeft = 0;
-            this.btn_ModificarPais.IconMarginRight = 0;
-            this.btn_ModificarPais.IconRightVisible = false;
-            this.btn_ModificarPais.IconRightZoom = 0D;
-            this.btn_ModificarPais.IconVisible = false;
-            this.btn_ModificarPais.IconZoom = 40D;
-            this.btn_ModificarPais.IsTab = false;
-            this.btn_ModificarPais.Location = new System.Drawing.Point(523, 209);
-            this.btn_ModificarPais.Margin = new System.Windows.Forms.Padding(5);
-            this.btn_ModificarPais.Name = "btn_ModificarPais";
-            this.btn_ModificarPais.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(130)))), ((int)(((byte)(232)))));
-            this.btn_ModificarPais.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(141)))), ((int)(((byte)(255)))));
-            this.btn_ModificarPais.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_ModificarPais.selected = false;
-            this.btn_ModificarPais.Size = new System.Drawing.Size(149, 33);
-            this.btn_ModificarPais.TabIndex = 27;
-            this.btn_ModificarPais.Text = "Actualizar";
-            this.btn_ModificarPais.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_ModificarPais.Textcolor = System.Drawing.Color.White;
-            this.btn_ModificarPais.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ModificarPais.Click += new System.EventHandler(this.btn_ModificarPais_Click);
+            this.txt_NombreAeropuerto.Location = new System.Drawing.Point(411, 134);
+            this.txt_NombreAeropuerto.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_NombreAeropuerto.Name = "txt_NombreAeropuerto";
+            this.txt_NombreAeropuerto.Size = new System.Drawing.Size(320, 22);
+            this.txt_NombreAeropuerto.TabIndex = 7;
             // 
-            // btn_AgregarPais
+            // label6
             // 
-            this.btn_AgregarPais.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btn_AgregarPais.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(130)))), ((int)(((byte)(232)))));
-            this.btn_AgregarPais.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_AgregarPais.BorderRadius = 0;
-            this.btn_AgregarPais.ButtonText = "Agregar";
-            this.btn_AgregarPais.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_AgregarPais.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_AgregarPais.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_AgregarPais.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_AgregarPais.Iconimage")));
-            this.btn_AgregarPais.Iconimage_right = null;
-            this.btn_AgregarPais.Iconimage_right_Selected = null;
-            this.btn_AgregarPais.Iconimage_Selected = null;
-            this.btn_AgregarPais.IconMarginLeft = 0;
-            this.btn_AgregarPais.IconMarginRight = 0;
-            this.btn_AgregarPais.IconRightVisible = false;
-            this.btn_AgregarPais.IconRightZoom = 0D;
-            this.btn_AgregarPais.IconVisible = false;
-            this.btn_AgregarPais.IconZoom = 40D;
-            this.btn_AgregarPais.IsTab = false;
-            this.btn_AgregarPais.Location = new System.Drawing.Point(343, 209);
-            this.btn_AgregarPais.Margin = new System.Windows.Forms.Padding(5);
-            this.btn_AgregarPais.Name = "btn_AgregarPais";
-            this.btn_AgregarPais.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(130)))), ((int)(((byte)(232)))));
-            this.btn_AgregarPais.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(203)))), ((int)(((byte)(104)))));
-            this.btn_AgregarPais.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_AgregarPais.selected = false;
-            this.btn_AgregarPais.Size = new System.Drawing.Size(149, 33);
-            this.btn_AgregarPais.TabIndex = 26;
-            this.btn_AgregarPais.Text = "Agregar";
-            this.btn_AgregarPais.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_AgregarPais.Textcolor = System.Drawing.Color.White;
-            this.btn_AgregarPais.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_AgregarPais.Click += new System.EventHandler(this.btn_AgregarPais_Click);
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(219, 134);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(176, 19);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Nombre del aeropuerto:";
+            // 
+            // id_Ciudad
+            // 
+            this.id_Ciudad.DataPropertyName = "id_ciudad";
+            this.id_Ciudad.HeaderText = "Clave";
+            this.id_Ciudad.Name = "id_Ciudad";
+            this.id_Ciudad.ReadOnly = true;
+            // 
+            // idpais
+            // 
+            this.idpais.DataPropertyName = "nombre_pais";
+            this.idpais.HeaderText = "Pais";
+            this.idpais.Name = "idpais";
+            this.idpais.ReadOnly = true;
+            // 
+            // Nombre_ciudad
+            // 
+            this.Nombre_ciudad.DataPropertyName = "nombre_ciudad";
+            this.Nombre_ciudad.HeaderText = "Ciudad";
+            this.Nombre_ciudad.Name = "Nombre_ciudad";
+            this.Nombre_ciudad.ReadOnly = true;
             // 
             // clave
             // 
@@ -850,7 +850,7 @@
             // 
             // ciudad
             // 
-            this.ciudad.DataPropertyName = "id_ciudad";
+            this.ciudad.DataPropertyName = "nombre_ciudad";
             this.ciudad.HeaderText = "Ciudad";
             this.ciudad.Name = "ciudad";
             this.ciudad.ReadOnly = true;
@@ -883,9 +883,9 @@
             this.bunifuCards1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ciudad)).EndInit();
             this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Aeropuertos)).EndInit();
             this.bunifuCards3.ResumeLayout(false);
             this.bunifuCards3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Aeropuertos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -912,9 +912,6 @@
         private System.Windows.Forms.TextBox txt_NombreCiudad;
         private System.Windows.Forms.Label label8;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgv_ciudad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_Ciudad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idpais;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre_ciudad;
         private System.Windows.Forms.TabPage tabPage3;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgv_Aeropuertos;
         private Bunifu.Framework.UI.BunifuCards bunifuCards3;
@@ -933,6 +930,9 @@
         private Bunifu.Framework.UI.BunifuFlatButton btn_EliminarAeropuerto;
         private Bunifu.Framework.UI.BunifuFlatButton btn_ActualizarAeropuerto;
         private Bunifu.Framework.UI.BunifuFlatButton btn_AgregarAeropuerto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_Ciudad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idpais;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre_ciudad;
         private System.Windows.Forms.DataGridViewTextBoxColumn clave;
         private System.Windows.Forms.DataGridViewTextBoxColumn ciudad;
         private System.Windows.Forms.DataGridViewTextBoxColumn aeropuerto;

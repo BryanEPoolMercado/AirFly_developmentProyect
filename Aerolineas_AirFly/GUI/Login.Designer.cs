@@ -40,10 +40,12 @@
             this.bunifuCustomTextbox2 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.bunifuCustomTextbox1 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.btn_cerrar_main = new Bunifu.Framework.UI.BunifuImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_cerrar_main)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -230,11 +232,28 @@
             this.bunifuCustomTextbox1.Size = new System.Drawing.Size(363, 41);
             this.bunifuCustomTextbox1.TabIndex = 8;
             // 
+            // btn_cerrar_main
+            // 
+            this.btn_cerrar_main.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_cerrar_main.BackColor = System.Drawing.Color.Transparent;
+            this.btn_cerrar_main.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrar_main.Image")));
+            this.btn_cerrar_main.ImageActive = null;
+            this.btn_cerrar_main.Location = new System.Drawing.Point(517, 4);
+            this.btn_cerrar_main.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_cerrar_main.Name = "btn_cerrar_main";
+            this.btn_cerrar_main.Size = new System.Drawing.Size(29, 27);
+            this.btn_cerrar_main.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_cerrar_main.TabIndex = 11;
+            this.btn_cerrar_main.TabStop = false;
+            this.btn_cerrar_main.Zoom = 8;
+            this.btn_cerrar_main.Click += new System.EventHandler(this.btn_cerrar_main_Click);
+            // 
             // frm_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(553, 634);
+            this.Controls.Add(this.btn_cerrar_main);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -247,6 +266,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_cerrar_main)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -265,6 +285,7 @@
         private WindowsFormsControlLibrary1.BunifuCustomTextbox bunifuCustomTextbox2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox bunifuCustomTextbox1;
+        private Bunifu.Framework.UI.BunifuImageButton btn_cerrar_main;
     }
 }
 

@@ -4,20 +4,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Datos.Modelo;
+using Datos.BO;
 
 namespace Datos.Servicios
 {
     public class srv_Aeropuerto
     {
         //list
-        public List<Aeropuerto> GetListAeropuerto()
+        private AirFly_Modelo modeloAeropuerto;
+        public List<Aeropuerto_BO> GetListaAeropuerto()
         {
-            List<Aeropuerto> objAeropuerto = new List<Aeropuerto>();
-            using (var db = new AirFly_Modelo())
-            {
-                objAeropuerto = db.Aeropuerto.ToList();
-                return objAeropuerto;
-            }
+            modeloAeropuerto = new AirFly_Modelo();
+            var selectCiudad = (from aeropuer in modeloAeropuerto.Aeropuerto
+                                join ciud in modeloAeropuerto.Ciudad on aeropuer.id_ciudad equals ciud.id_ciudad
+
+                                select new Aeropuerto_BO
+                                {
+                                    id_aeropuerto= aeropuer.id_aeropuerto,
+                                    nombre_aeropuerto = aeropuer.nombre_aeropuerto,
+                                    nombre_ciudad = ciud.nombre_ciudad,
+                                }).ToList();
+            return selectCiudad;
         }
         //add
         public void AgregarAeropuerto(Aeropuerto item)

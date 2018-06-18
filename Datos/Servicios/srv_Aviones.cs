@@ -4,20 +4,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Datos.Modelo;
+using Datos.BO;
 
 namespace Datos.Servicios
 {
     public class srv_Aviones
     {
         //list
-        public List<Avion> GetListAvion()
+        private AirFly_Modelo modeloavion;
+
+        public List<Avion_BO> GetListaAvion()
         {
-            List<Avion> objAvion = new List<Avion>();
-            using (var db = new AirFly_Modelo())
-            {
-                objAvion = db.Avion.ToList();
-                return objAvion;
-            }
+            modeloavion = new AirFly_Modelo();
+            var selectavion = (from avi in modeloavion.Avion
+                               join aer in modeloavion.Aerolinea on avi.id_aerolinea equals aer.id_aerolinea join sec in modeloavion.Secciones on avi.id_secciones equals sec.id_secciones
+
+                               select new Avion_BO
+                               {
+                                   id_avion = avi.id_avion,
+                                   nombre_avion = avi.nombre_avion,
+                                   numfila_avion = avi.numfila_avion,
+                                   numcolumna_avion = avi.numcolumna_avion,
+                                   nombre_aerolinea = aer.nombre_aerolinea,
+                                   nombre_seccion = sec.nombre_seccion,
+                               }).ToList();
+            return selectavion;
         }
         //add
         public void AgregarAvion(Avion item)

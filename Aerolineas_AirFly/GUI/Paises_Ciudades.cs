@@ -80,12 +80,12 @@ namespace Aerolineas_AirFly.GUI
         public void MostrarCiudades()
         {
             dgv_ciudad.AutoGenerateColumns = false;
-            dgv_ciudad.DataSource = Servciudad.GetListCiudad();
+            dgv_ciudad.DataSource = Servciudad.GetListaCiudad();
         }
         public void MostrarAeropuertos()
         {
             dgv_Aeropuertos.AutoGenerateColumns = false;
-            dgv_Aeropuertos.DataSource = ServAeropuerto.GetListAeropuerto();
+            dgv_Aeropuertos.DataSource = ServAeropuerto.GetListaAeropuerto();
         }
         public void LimpiarPaises()
         {
@@ -178,21 +178,21 @@ namespace Aerolineas_AirFly.GUI
         private void btn_AgregarCiudad_Click(object sender, EventArgs e)
         {
             Servciudad.AgregarCiudad(datosciudad());
-            dgv_ciudad.DataSource = Servciudad.GetListCiudad();
+            dgv_ciudad.DataSource = Servciudad.GetListaCiudad();
             LimpiarCiudades();
         }
 
         private void btn_ActualizarCiudad_Click(object sender, EventArgs e)
         {
             Servciudad.ActualizarCiudad(ModificarCiudad());
-            dgv_ciudad.DataSource = Servciudad.GetListCiudad();
+            dgv_ciudad.DataSource = Servciudad.GetListaCiudad();
             LimpiarCiudades();
         }
 
         private void btn_EliminarCiudad_Click(object sender, EventArgs e)
         {
             Servciudad.EliminarCiudad(ModificarCiudad());
-            dgv_ciudad.DataSource = Servciudad.GetListCiudad();
+            dgv_ciudad.DataSource = Servciudad.GetListaCiudad();
             LimpiarCiudades();
         }
 
@@ -215,21 +215,21 @@ namespace Aerolineas_AirFly.GUI
         private void btn_AgregarAeropuerto_Click(object sender, EventArgs e)
         {
             ServAeropuerto.AgregarAeropuerto(datosAeropuerto());
-            dgv_Aeropuertos.DataSource = ServAeropuerto.GetListAeropuerto();
+            dgv_Aeropuertos.DataSource = ServAeropuerto.GetListaAeropuerto();
             LimpiarAeropuerto();
         }
 
         private void btn_ActualizarAeropuerto_Click(object sender, EventArgs e)
         {
             ServAeropuerto.ActualizarAeropuerto(ModificarAeropuerto());
-            dgv_Aeropuertos.DataSource = ServAeropuerto.GetListAeropuerto();
+            dgv_Aeropuertos.DataSource = ServAeropuerto.GetListaAeropuerto();
             LimpiarAeropuerto();
         }
 
         private void btn_EliminarAeropuerto_Click(object sender, EventArgs e)
         {
             ServAeropuerto.EliminarAeropuerto(ModificarAeropuerto());
-            dgv_Aeropuertos.DataSource = ServAeropuerto.GetListAeropuerto();
+            dgv_Aeropuertos.DataSource = ServAeropuerto.GetListaAeropuerto();
             LimpiarAeropuerto();
         }
 
