@@ -12,6 +12,7 @@ namespace Aerolineas_AirFly.GUI
 {
     public partial class InformacionVuelo : Form
     {
+        //THIS shit
         public InformacionVuelo()
         {
             InitializeComponent();
