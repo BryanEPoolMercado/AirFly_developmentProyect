@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9179ABE8-E918-4D87-8075-F9CDF723AEAA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Aerolineas_AirFly</RootNamespace>
+    <AssemblyName>Aerolineas_AirFly</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\Proyect\Proyecto version 2\AirFly\AirFly\bin\Debug\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\Downloads\RespaldoProyecto3\Proyecto\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GUI\Avion_Aerolinea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Avion_Aerolinea.Designer.cs">
+      <DependentUpon>Avion_Aerolinea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AvisoExit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AvisoExit.Designer.cs">
+      <DependentUpon>AvisoExit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FondoPantalla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FondoPantalla.Designer.cs">
+      <DependentUpon>FondoPantalla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MenuPrincipal.Designer.cs">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MisReservaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MisReservaciones.Designer.cs">
+      <DependentUpon>MisReservaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Moneda_Tarjeta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Moneda_Tarjeta.Designer.cs">
+      <DependentUpon>Moneda_Tarjeta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Paises_Ciudades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Paises_Ciudades.Designer.cs">
+      <DependentUpon>Paises_Ciudades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Registrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Registrar.Designer.cs">
+      <DependentUpon>Registrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ReservacionVuelos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ReservacionVuelos.Designer.cs">
+      <DependentUpon>ReservacionVuelos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Usuarios.Designer.cs">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Vuelos_Rutas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Vuelos_Rutas.Designer.cs">
+      <DependentUpon>Vuelos_Rutas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\Avion_Aerolinea.resx">
+      <DependentUpon>Avion_Aerolinea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AvisoExit.resx">
+      <DependentUpon>AvisoExit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FondoPantalla.resx">
+      <DependentUpon>FondoPantalla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MenuPrincipal.resx">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MisReservaciones.resx">
+      <DependentUpon>MisReservaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Moneda_Tarjeta.resx">
+      <DependentUpon>Moneda_Tarjeta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Paises_Ciudades.resx">
+      <DependentUpon>Paises_Ciudades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Registrar.resx">
+      <DependentUpon>Registrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ReservacionVuelos.resx">
+      <DependentUpon>ReservacionVuelos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Usuarios.resx">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Vuelos_Rutas.resx">
+      <DependentUpon>Vuelos_Rutas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="bin\Debug\Aerolineas_AirFly.exe.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Aerolineas_AirFly.exe" />
+    <Content Include="bin\Debug\Aerolineas_AirFly.pdb" />
+    <Content Include="bin\Debug\Bunifu_UI_v1.5.3.dll" />
+    <Content Include="bin\EntityFramework.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Datos\Datos.csproj">
+      <Project>{471b96b0-9d0a-431f-a1f9-da2edc6d66e1}</Project>
+      <Name>Datos</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
