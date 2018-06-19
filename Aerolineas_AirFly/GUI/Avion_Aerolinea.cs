@@ -27,6 +27,7 @@ namespace Aerolineas_AirFly.GUI
             objAvion = new Avion();
 
             objAvion.id_aerolinea = Convert.ToInt32(cmb_Aerolinea.SelectedValue);
+            objAvion.modelo_avion = Convert.ToString(cmb_modelo.SelectedValue);
             objAvion.id_secciones = Convert.ToInt16(cmb_Secciones.SelectedValue);
             objAvion.nombre_avion = txt_nombreAvion.Text.Trim();
             objAvion.numfila_avion = Convert.ToInt32(txt_NumFilas.Text.Trim());
@@ -45,6 +46,7 @@ namespace Aerolineas_AirFly.GUI
             objAvion = new Avion();
 
             objAvion.id_avion = Convert.ToInt16(txt_codigoAvion.Text.Trim());
+            objAvion.modelo_avion = Convert.ToString(cmb_modelo.SelectedValue);
             objAvion.id_aerolinea = Convert.ToInt32(cmb_Aerolinea.SelectedValue);
             objAvion.id_secciones = Convert.ToInt16(cmb_Secciones.SelectedValue);
             objAvion.nombre_avion = txt_nombreAvion.Text.Trim();
@@ -58,6 +60,7 @@ namespace Aerolineas_AirFly.GUI
 
             objAerolinea.id_aerolinea = Convert.ToInt16(txt_CodigoAerolinea.Text.Trim());
             objAerolinea.nombre_aerolinea = txt_NombreAerolinea.Text.Trim();
+            objAvion.modelo_avion = Convert.ToString(cmb_modelo.SelectedValue);
             return objAerolinea;
         }
         public void LimpiarAvion()

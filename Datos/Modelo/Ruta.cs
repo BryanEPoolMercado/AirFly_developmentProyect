@@ -26,6 +26,7 @@ namespace Datos.Modelo
         public Nullable<int> aeropuerto_origen { get; set; }
         public Nullable<int> aeropuerto_destino { get; set; }
         public string nombre_ruta { get; set; }
+        public string nombre_ruta1 { get; set; }
     
         public virtual Aeropuerto Aeropuerto { get; set; }
         public virtual Aeropuerto Aeropuerto1 { get; set; }

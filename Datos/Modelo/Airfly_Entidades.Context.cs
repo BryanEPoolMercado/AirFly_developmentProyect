@@ -46,5 +46,6 @@ namespace Datos.Modelo
         public virtual DbSet<Ubicacion> Ubicacion { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
         public virtual DbSet<Vuelos> Vuelos { get; set; }
+        public virtual DbSet<Modelo_avion> Modelo_avion { get; set; }
     }
 }

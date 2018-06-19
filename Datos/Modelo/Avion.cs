@@ -26,6 +26,7 @@ namespace Datos.Modelo
         public string nombre_avion { get; set; }
         public Nullable<int> id_aerolinea { get; set; }
         public Nullable<int> id_secciones { get; set; }
+        public string modelo_avion { get; set; }
     
         public virtual Aerolinea Aerolinea { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

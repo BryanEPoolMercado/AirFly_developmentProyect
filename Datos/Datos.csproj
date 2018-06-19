@@ -98,6 +98,9 @@
     <Compile Include="Modelo\Metodo_pago.cs">
       <DependentUpon>Airfly_Entidades.tt</DependentUpon>
     </Compile>
+    <Compile Include="Modelo\Modelo_avion.cs">
+      <DependentUpon>Airfly_Entidades.tt</DependentUpon>
+    </Compile>
     <Compile Include="Modelo\Moneda.cs">
       <DependentUpon>Airfly_Entidades.tt</DependentUpon>
     </Compile>
@@ -139,6 +142,7 @@
     <Compile Include="Servicios\srv_Aeropuerto.cs" />
     <Compile Include="Servicios\srv_Aviones.cs" />
     <Compile Include="Servicios\srv_Ciudad.cs" />
+    <Compile Include="Servicios\srv_Modelo.cs" />
     <Compile Include="Servicios\srv_Moneda.cs" />
     <Compile Include="Servicios\srv_Pais.cs" />
     <Compile Include="Servicios\srv_Ruta.cs" />
