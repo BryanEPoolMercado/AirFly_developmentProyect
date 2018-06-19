@@ -29,21 +29,22 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_modelo1));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ptb_avionmodel1 = new System.Windows.Forms.PictureBox();
             this.cmb_clase_modelo1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1 = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_avionmodel1)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // ptb_avionmodel1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 268);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(776, 170);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.ptb_avionmodel1.Image = ((System.Drawing.Image)(resources.GetObject("ptb_avionmodel1.Image")));
+            this.ptb_avionmodel1.Location = new System.Drawing.Point(12, 268);
+            this.ptb_avionmodel1.Name = "ptb_avionmodel1";
+            this.ptb_avionmodel1.Size = new System.Drawing.Size(776, 170);
+            this.ptb_avionmodel1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptb_avionmodel1.TabIndex = 0;
+            this.ptb_avionmodel1.TabStop = false;
             // 
             // cmb_clase_modelo1
             // 
@@ -54,6 +55,7 @@
             this.cmb_clase_modelo1.Name = "cmb_clase_modelo1";
             this.cmb_clase_modelo1.Size = new System.Drawing.Size(139, 24);
             this.cmb_clase_modelo1.TabIndex = 1;
+            this.cmb_clase_modelo1.SelectedIndexChanged += new System.EventHandler(this.cmb_clase_modelo1_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -65,18 +67,27 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Seleccione una clase";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Location = new System.Drawing.Point(223, 89);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(393, 173);
+            this.panel1.TabIndex = 3;
+            // 
             // frm_modelo1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmb_clase_modelo1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.ptb_avionmodel1);
             this.Name = "frm_modelo1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Seleccion de asientos";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_avionmodel1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -84,8 +95,9 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox ptb_avionmodel1;
         private System.Windows.Forms.ComboBox cmb_clase_modelo1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

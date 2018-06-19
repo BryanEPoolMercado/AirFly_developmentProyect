@@ -15,6 +15,12 @@
     <Property Name="nombre_aeropuerto" Type="varchar" MaxLength="50" />
     <Property Name="id_ciudad" Type="int" />
   </EntityType>
+  <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'AirFly_BDD.dbo.Asiento_Avion' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="Asiento_Avion">
+          <Property Name="id_asiento" Type="int" />
+          <Property Name="id_vuelo" Type="int" />
+        </EntityType>-->
   <EntityType Name="Asientos">
     <Key>
       <PropertyRef Name="id_asiento" />
@@ -88,6 +94,13 @@
     <Property Name="id_metodopago" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="monto_pago" Type="varchar" MaxLength="50" />
   </EntityType>
+  <EntityType Name="Modelo_avion">
+    <Key>
+      <PropertyRef Name="id_modelo" />
+    </Key>
+    <Property Name="id_modelo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre_modelo" Type="varchar" MaxLength="50" />
+  </EntityType>
   <EntityType Name="Moneda">
     <Key>
       <PropertyRef Name="id_moneda" />
@@ -151,8 +164,8 @@
     </Key>
     <Property Name="id_ruta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="nombre_ruta" Type="varchar" MaxLength="50" />
-    <Property Name="distancia" Type="decimal" Precision="18" Scale="0" />
-    <Property Name="tiempo" Type="varchar" MaxLength="1" />
+    <Property Name="distancia" Type="varchar" MaxLength="10" />
+    <Property Name="tiempo" Type="varchar" MaxLength="10" />
     <Property Name="aeropuerto_origen" Type="int" />
     <Property Name="aeropuerto_destino" Type="int" />
   </EntityType>
@@ -170,14 +183,6 @@
     <Property Name="id_tarjeta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="nombre_tarjeta" Type="varchar" MaxLength="50" />
     <Property Name="id_paypal" Type="int" />
-  </EntityType>
-  <EntityType Name="Ubicacion">
-    <Key>
-      <PropertyRef Name="id_ubicacion" />
-    </Key>
-    <Property Name="id_ubicacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="nombre_ubicacion" Type="varchar" MaxLength="50" />
-    <Property Name="id_asiento" Type="int" />
   </EntityType>
   <EntityType Name="Usuario">
     <Key>
@@ -197,7 +202,7 @@
     </Key>
     <Property Name="id_vuelo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="fecha_vuelo" Type="date" />
-    <Property Name="hora_vuelo" Type="varchar" MaxLength="1" />
+    <Property Name="hora_vuelo" Type="varchar" MaxLength="10" />
     <Property Name="tiempo_vuelo" Type="varchar" MaxLength="10" />
     <Property Name="distancia_vuelo" Type="varchar" MaxLength="10" />
     <Property Name="id_avion" Type="int" />
@@ -239,7 +244,10 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_idasiento">
+  <!--Errores durante la generación:
+error 6004: Una relación hace referencia a la tabla 'AirFly_BDD.dbo.Asiento_Avion', pero no se encuentra la tabla.
+        <Association Name="FK_idasiento" />-->
+  <Association Name="FK_idasiento1">
     <End Role="Asientos" Type="Self.Asientos" Multiplicity="0..1" />
     <End Role="Boleto" Type="Self.Boleto" Multiplicity="*" />
     <ReferentialConstraint>
@@ -247,18 +255,6 @@
         <PropertyRef Name="id_asiento" />
       </Principal>
       <Dependent Role="Boleto">
-        <PropertyRef Name="id_asiento" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_idasiento1">
-    <End Role="Asientos" Type="Self.Asientos" Multiplicity="0..1" />
-    <End Role="Ubicacion" Type="Self.Ubicacion" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Asientos">
-        <PropertyRef Name="id_asiento" />
-      </Principal>
-      <Dependent Role="Ubicacion">
         <PropertyRef Name="id_asiento" />
       </Dependent>
     </ReferentialConstraint>
@@ -479,6 +475,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <!--Errores durante la generación:
+error 6004: Una relación hace referencia a la tabla 'AirFly_BDD.dbo.Asiento_Avion', pero no se encuentra la tabla.
+        <Association Name="FK_idvuelo" />-->
   <Association Name="FK_idvuelo1">
     <End Role="Vuelos" Type="Self.Vuelos" Multiplicity="0..1" />
     <End Role="Boleto" Type="Self.Boleto" Multiplicity="*" />
@@ -514,6 +513,7 @@
     <EntitySet Name="Detalle_Compra" EntityType="Self.Detalle_Compra" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Estado_pago" EntityType="Self.Estado_pago" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Metodo_pago" EntityType="Self.Metodo_pago" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Modelo_avion" EntityType="Self.Modelo_avion" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Moneda" EntityType="Self.Moneda" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Pais" EntityType="Self.Pais" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Pasajeros" EntityType="Self.Pasajeros" Schema="dbo" store:Type="Tables" />
@@ -524,7 +524,6 @@
     <EntitySet Name="Ruta" EntityType="Self.Ruta" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Secciones" EntityType="Self.Secciones" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Tarjeta" EntityType="Self.Tarjeta" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Ubicacion" EntityType="Self.Ubicacion" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Vuelos" EntityType="Self.Vuelos" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_idaerodestino" Association="Self.FK_idaerodestino">
@@ -539,13 +538,9 @@
       <End Role="Aeropuerto" EntitySet="Aeropuerto" />
       <End Role="Ruta" EntitySet="Ruta" />
     </AssociationSet>
-    <AssociationSet Name="FK_idasiento" Association="Self.FK_idasiento">
-      <End Role="Asientos" EntitySet="Asientos" />
-      <End Role="Boleto" EntitySet="Boleto" />
-    </AssociationSet>
     <AssociationSet Name="FK_idasiento1" Association="Self.FK_idasiento1">
       <End Role="Asientos" EntitySet="Asientos" />
-      <End Role="Ubicacion" EntitySet="Ubicacion" />
+      <End Role="Boleto" EntitySet="Boleto" />
     </AssociationSet>
     <AssociationSet Name="FK_idavion" Association="Self.FK_idavion">
       <End Role="Avion" EntitySet="Avion" />

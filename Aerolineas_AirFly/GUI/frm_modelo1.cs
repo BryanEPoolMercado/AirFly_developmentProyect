@@ -15,12 +15,22 @@ namespace Aerolineas_AirFly.GUI
         public frm_modelo1()
         {
             InitializeComponent();
-            cmb_clase_modelo1.Items.Add("Seleccione una clase");
+            cmb_clase_modelo1.SelectedItem = "Seleccione una clase";
             cmb_clase_modelo1.Items.Add("Primera clase");
             cmb_clase_modelo1.Items.Add("Clase Economica plus");
             cmb_clase_modelo1.Items.Add("Clase Economica");
 
+            
 
+        }
+
+        private void cmb_clase_modelo1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmb_clase_modelo1.SelectedItem.ToString() == "Primera clase")
+            {
+                panel1.Visible = true;
+            }
+            ptb_avionmodel1.Visible = false;
         }
     }
 }

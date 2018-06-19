@@ -148,7 +148,7 @@
     <EntitySetMapping Name="Ruta">
       <EntityTypeMapping TypeName="Modelo_Airfly.Ruta">
         <MappingFragment StoreEntitySet="Ruta">
-          <ScalarProperty Name="nombre_ruta" ColumnName="nombre_ruta" />
+          <ScalarProperty Name="nombre_ruta1" ColumnName="nombre_ruta" />
           <ScalarProperty Name="id_ruta" ColumnName="id_ruta" />
           <ScalarProperty Name="distancia" ColumnName="distancia" />
           <ScalarProperty Name="tiempo" ColumnName="tiempo" />
@@ -171,15 +171,6 @@
           <ScalarProperty Name="id_tarjeta" ColumnName="id_tarjeta" />
           <ScalarProperty Name="nombre_tarjeta" ColumnName="nombre_tarjeta" />
           <ScalarProperty Name="id_paypal" ColumnName="id_paypal" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Ubicacion">
-      <EntityTypeMapping TypeName="Modelo_Airfly.Ubicacion">
-        <MappingFragment StoreEntitySet="Ubicacion">
-          <ScalarProperty Name="id_ubicacion" ColumnName="id_ubicacion" />
-          <ScalarProperty Name="nombre_ubicacion" ColumnName="nombre_ubicacion" />
-          <ScalarProperty Name="id_asiento" ColumnName="id_asiento" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -225,5 +216,13 @@
         <ScalarProperty Name="id_reservacion" ColumnName="id_reservacion" />
       </EndProperty>
     </AssociationSetMapping>
+    <EntitySetMapping Name="Modelo_avion">
+      <EntityTypeMapping TypeName="Modelo_Airfly.Modelo_avion">
+        <MappingFragment StoreEntitySet="Modelo_avion">
+          <ScalarProperty Name="Nombre_modelo" ColumnName="Nombre_modelo" />
+          <ScalarProperty Name="id_modelo" ColumnName="id_modelo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

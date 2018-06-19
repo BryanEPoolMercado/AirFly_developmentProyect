@@ -16,29 +16,35 @@ namespace Aerolineas_AirFly.GUI
         public frm_ReservacionVuelos()
         {
             InitializeComponent();
+            if(cmb_ruta.Text!="")
+            {
+                btn_buscarvuelo.Enabled = false;
+            }
+            else
+            {
+                btn_buscarvuelo.Enabled = true;
+            }
         }
-        public void ListaCiudades()
+        public void ListaRutas()
         {
             AirFly_Modelo con = new AirFly_Modelo();
 
-            var Lista = con.Ciudad.ToList();
+            var Lista = con.Ruta.ToList();
 
             if (Lista.Count > 0)
             {
-                cmb_Origen.DataSource = Lista;
-                cmb_Origen.DisplayMember = "nombre_ciudad";
-                cmb_Origen.ValueMember = "id_ciudad";
+                cmb_ruta.DataSource = Lista;
+                cmb_ruta.DisplayMember = "nombre_ruta";
+                cmb_ruta.ValueMember = "id_ruta";
 
-                cmb_Destino.DataSource = Lista;
-                cmb_Destino.DisplayMember = "nombre_ciudad";
-                cmb_Destino.ValueMember = "id_ciudad";
+             
             }
 
         }
 
         private void frm_ReservacionVuelos_Load(object sender, EventArgs e)
         {
-            ListaCiudades();
+            ListaRutas();
         }
     }
 }

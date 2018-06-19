@@ -44,6 +44,7 @@
     <NavigationProperty Name="Aerolinea" Relationship="Self.FK_idaerolinea" FromRole="Avion" ToRole="Aerolinea" />
     <NavigationProperty Name="Vuelos" Relationship="Self.FK_idavion" FromRole="Avion" ToRole="Vuelos" />
     <NavigationProperty Name="Secciones" Relationship="Self.FK_idsecciones1" FromRole="Avion" ToRole="Secciones" />
+    <Property Name="modelo_avion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="Boleto">
     <Key>
@@ -166,14 +167,15 @@
       <PropertyRef Name="id_ruta" />
     </Key>
     <Property Name="id_ruta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="distancia" Type="Decimal" Precision="18" Scale="0" />
-    <Property Name="tiempo" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="distancia" Type="Decimal" />
+    <Property Name="tiempo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
     <Property Name="aeropuerto_origen" Type="Int32" />
     <Property Name="aeropuerto_destino" Type="Int32" />
     <NavigationProperty Name="Aeropuerto" Relationship="Self.FK_idaerodestino" FromRole="Ruta" ToRole="Aeropuerto" />
     <NavigationProperty Name="Aeropuerto1" Relationship="Self.FK_idaerorigen" FromRole="Ruta" ToRole="Aeropuerto" />
     <NavigationProperty Name="Vuelos" Relationship="Self.FK_idruta" FromRole="Ruta" ToRole="Vuelos" />
     <Property Name="nombre_ruta" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="nombre_ruta1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="Secciones">
     <Key>
@@ -223,7 +225,7 @@
     </Key>
     <Property Name="id_vuelo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="fecha_vuelo" Type="DateTime" Precision="0" />
-    <Property Name="hora_vuelo" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="hora_vuelo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
     <Property Name="tiempo_vuelo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
     <Property Name="distancia_vuelo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
     <Property Name="id_avion" Type="Int32" />
@@ -607,5 +609,13 @@
       <End Role="Pasajeros" EntitySet="Pasajeros" />
       <End Role="Reservacion" EntitySet="Reservacion" />
     </AssociationSet>
+    <EntitySet Name="Modelo_avion" EntityType="Modelo_Airfly.Modelo_avion" />
   </EntityContainer>
+  <EntityType Name="Modelo_avion">
+    <Key>
+      <PropertyRef Name="id_modelo" />
+    </Key>
+    <Property Name="id_modelo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre_modelo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
 </Schema>
