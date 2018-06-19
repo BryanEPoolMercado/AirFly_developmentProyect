@@ -131,6 +131,9 @@
     <Compile Include="Modelo\Ubicacion.cs">
       <DependentUpon>Airfly_Entidades.tt</DependentUpon>
     </Compile>
+    <Compile Include="Modelo\Ubicacion1.cs">
+      <DependentUpon>Airfly_Entidades.tt</DependentUpon>
+    </Compile>
     <Compile Include="Modelo\Usuario.cs">
       <DependentUpon>Airfly_Entidades.tt</DependentUpon>
     </Compile>

@@ -20,8 +20,8 @@
           <Property Name="nombre_aeropuerto" Type="varchar" MaxLength="50" />
           <Property Name="id_ciudad" Type="int" />
         </EntityType>
-        <!--Errores durante la generación:
-advertencia 6013: La tabla o vista 'AirFly_BDD.dbo.Asiento_Avion' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'AirFly_BDD.dbo.Asiento_Avion' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
         <EntityType Name="Asiento_Avion">
           <Property Name="id_asiento" Type="int" />
           <Property Name="id_vuelo" Type="int" />
@@ -40,8 +40,7 @@ advertencia 6013: La tabla o vista 'AirFly_BDD.dbo.Asiento_Avion' no tiene defin
             <PropertyRef Name="id_avion" />
           </Key>
           <Property Name="id_avion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="numfila_avion" Type="int" />
-          <Property Name="numcolumna_avion" Type="int" />
+          <Property Name="num_asientos" Type="int" />
           <Property Name="nombre_avion" Type="varchar" MaxLength="50" />
           <Property Name="id_aerolinea" Type="int" />
           <Property Name="id_secciones" Type="int" />
@@ -90,7 +89,7 @@ advertencia 6013: La tabla o vista 'AirFly_BDD.dbo.Asiento_Avion' no tiene defin
             <PropertyRef Name="id_estadopago" />
           </Key>
           <Property Name="id_estadopago" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="descripcion" Type="varchar" MaxLength="200" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="200" />
         </EntityType>
         <EntityType Name="Metodo_pago">
           <Key>
@@ -105,6 +104,8 @@ advertencia 6013: La tabla o vista 'AirFly_BDD.dbo.Asiento_Avion' no tiene defin
           </Key>
           <Property Name="id_modelo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Nombre_modelo" Type="varchar" MaxLength="50" />
+          <Property Name="Filas" Type="int" />
+          <Property Name="columnas" Type="int" />
         </EntityType>
         <EntityType Name="Moneda">
           <Key>
@@ -136,7 +137,7 @@ advertencia 6013: La tabla o vista 'AirFly_BDD.dbo.Asiento_Avion' no tiene defin
             <PropertyRef Name="id_paypal" />
           </Key>
           <Property Name="id_paypal" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="nombre_paypal" Type="varchar" MaxLength="50" />
+          <Property Name="nombre_master" Type="varchar" MaxLength="50" />
           <Property Name="fecha_vencimiento" Type="date" />
           <Property Name="tipo" Type="varchar" MaxLength="50" />
           <Property Name="cvc" Type="int" />
@@ -168,9 +169,8 @@ advertencia 6013: La tabla o vista 'AirFly_BDD.dbo.Asiento_Avion' no tiene defin
             <PropertyRef Name="id_ruta" />
           </Key>
           <Property Name="id_ruta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="nombre_ruta" Type="varchar" MaxLength="50" />
-          <Property Name="distancia" Type="varchar" MaxLength="10" />
-          <Property Name="tiempo" Type="varchar" MaxLength="10" />
+          <Property Name="distancia" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="tiempo" Type="time" Precision="7" />
           <Property Name="aeropuerto_origen" Type="int" />
           <Property Name="aeropuerto_destino" Type="int" />
         </EntityType>
@@ -189,15 +189,20 @@ advertencia 6013: La tabla o vista 'AirFly_BDD.dbo.Asiento_Avion' no tiene defin
           <Property Name="nombre_tarjeta" Type="varchar" MaxLength="50" />
           <Property Name="id_paypal" Type="int" />
         </EntityType>
+        <EntityType Name="Ubicacion">
+          <Key>
+            <PropertyRef Name="id_ubicacion" />
+          </Key>
+          <Property Name="id_ubicacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre_ubicacion" Type="varchar" MaxLength="50" />
+          <Property Name="id_asiento" Type="int" />
+        </EntityType>
         <EntityType Name="Usuario">
           <Key>
             <PropertyRef Name="id_usuario" />
           </Key>
           <Property Name="id_usuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nombre_usuario" Type="varchar" MaxLength="50" />
-          <Property Name="apellidopat_usuario" Type="varchar" MaxLength="50" />
-          <Property Name="apellidomat_usuario" Type="varchar" MaxLength="50" />
-          <Property Name="correo_usuario" Type="varchar" MaxLength="50" />
           <Property Name="contraseña_usuario" Type="varchar" MaxLength="50" />
           <Property Name="id_perfil" Type="int" />
         </EntityType>
@@ -207,7 +212,7 @@ advertencia 6013: La tabla o vista 'AirFly_BDD.dbo.Asiento_Avion' no tiene defin
           </Key>
           <Property Name="id_vuelo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="fecha_vuelo" Type="date" />
-          <Property Name="hora_vuelo" Type="varchar" MaxLength="10" />
+          <Property Name="hora_vuelo" Type="time" Precision="7" />
           <Property Name="tiempo_vuelo" Type="varchar" MaxLength="10" />
           <Property Name="distancia_vuelo" Type="varchar" MaxLength="10" />
           <Property Name="id_avion" Type="int" />
@@ -249,10 +254,7 @@ advertencia 6013: La tabla o vista 'AirFly_BDD.dbo.Asiento_Avion' no tiene defin
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <!--Errores durante la generación:
-error 6004: Una relación hace referencia a la tabla 'AirFly_BDD.dbo.Asiento_Avion', pero no se encuentra la tabla.
-        <Association Name="FK_idasiento" />-->
-        <Association Name="FK_idasiento1">
+        <Association Name="FK_idasiento">
           <End Role="Asientos" Type="Self.Asientos" Multiplicity="0..1" />
           <End Role="Boleto" Type="Self.Boleto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -260,6 +262,18 @@ error 6004: Una relación hace referencia a la tabla 'AirFly_BDD.dbo.Asiento_Avi
               <PropertyRef Name="id_asiento" />
             </Principal>
             <Dependent Role="Boleto">
+              <PropertyRef Name="id_asiento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_idasiento2">
+          <End Role="Asientos" Type="Self.Asientos" Multiplicity="0..1" />
+          <End Role="Ubicacion" Type="Self.Ubicacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Asientos">
+              <PropertyRef Name="id_asiento" />
+            </Principal>
+            <Dependent Role="Ubicacion">
               <PropertyRef Name="id_asiento" />
             </Dependent>
           </ReferentialConstraint>
@@ -372,7 +386,7 @@ error 6004: Una relación hace referencia a la tabla 'AirFly_BDD.dbo.Asiento_Avi
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_idpasajero1">
+        <Association Name="FK_idpasajero2">
           <End Role="Pasajeros" Type="Self.Pasajeros" Multiplicity="1" />
           <End Role="Reservacion_Pasajero" Type="Self.Reservacion_Pasajero" Multiplicity="*" />
           <ReferentialConstraint>
@@ -480,8 +494,8 @@ error 6004: Una relación hace referencia a la tabla 'AirFly_BDD.dbo.Asiento_Avi
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <!--Errores durante la generación:
-error 6004: Una relación hace referencia a la tabla 'AirFly_BDD.dbo.Asiento_Avion', pero no se encuentra la tabla.
+        <!--Errors Found During Generation:
+error 6004: The table 'AirFly_BDD.dbo.Asiento_Avion' is referenced by a relationship, but cannot be found.
         <Association Name="FK_idvuelo" />-->
         <Association Name="FK_idvuelo1">
           <End Role="Vuelos" Type="Self.Vuelos" Multiplicity="0..1" />
@@ -507,6 +521,9 @@ error 6004: Una relación hace referencia a la tabla 'AirFly_BDD.dbo.Asiento_Avi
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <!--Errors Found During Generation:
+error 6004: The table 'AirFly_BDD.dbo.Asiento_Avion' is referenced by a relationship, but cannot be found.
+        <Association Name="PK_idasiento" />-->
         <EntityContainer Name="Modelo_AirflyStoreContainer">
           <EntitySet Name="Aerolinea" EntityType="Self.Aerolinea" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Aeropuerto" EntityType="Self.Aeropuerto" Schema="dbo" store:Type="Tables" />
@@ -529,6 +546,7 @@ error 6004: Una relación hace referencia a la tabla 'AirFly_BDD.dbo.Asiento_Avi
           <EntitySet Name="Ruta" EntityType="Self.Ruta" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Secciones" EntityType="Self.Secciones" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tarjeta" EntityType="Self.Tarjeta" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Ubicacion" EntityType="Self.Ubicacion" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Vuelos" EntityType="Self.Vuelos" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_idaerodestino" Association="Self.FK_idaerodestino">
@@ -543,9 +561,13 @@ error 6004: Una relación hace referencia a la tabla 'AirFly_BDD.dbo.Asiento_Avi
             <End Role="Aeropuerto" EntitySet="Aeropuerto" />
             <End Role="Ruta" EntitySet="Ruta" />
           </AssociationSet>
-          <AssociationSet Name="FK_idasiento1" Association="Self.FK_idasiento1">
+          <AssociationSet Name="FK_idasiento" Association="Self.FK_idasiento">
             <End Role="Asientos" EntitySet="Asientos" />
             <End Role="Boleto" EntitySet="Boleto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_idasiento2" Association="Self.FK_idasiento2">
+            <End Role="Asientos" EntitySet="Asientos" />
+            <End Role="Ubicacion" EntitySet="Ubicacion" />
           </AssociationSet>
           <AssociationSet Name="FK_idavion" Association="Self.FK_idavion">
             <End Role="Avion" EntitySet="Avion" />
@@ -583,7 +605,7 @@ error 6004: Una relación hace referencia a la tabla 'AirFly_BDD.dbo.Asiento_Avi
             <End Role="Pasajeros" EntitySet="Pasajeros" />
             <End Role="Boleto" EntitySet="Boleto" />
           </AssociationSet>
-          <AssociationSet Name="FK_idpasajero1" Association="Self.FK_idpasajero1">
+          <AssociationSet Name="FK_idpasajero2" Association="Self.FK_idpasajero2">
             <End Role="Pasajeros" EntitySet="Pasajeros" />
             <End Role="Reservacion_Pasajero" EntitySet="Reservacion_Pasajero" />
           </AssociationSet>
@@ -662,6 +684,7 @@ error 6004: Una relación hace referencia a la tabla 'AirFly_BDD.dbo.Asiento_Avi
           <NavigationProperty Name="Boleto" Relationship="Self.FK_idasiento" FromRole="Asientos" ToRole="Boleto" />
           <NavigationProperty Name="Ubicacion" Relationship="Self.FK_idasiento1" FromRole="Asientos" ToRole="Ubicacion" />
           <NavigationProperty Name="Secciones" Relationship="Self.FK_idsecciones" FromRole="Asientos" ToRole="Secciones" />
+          <NavigationProperty Name="Ubicacion1" Relationship="Modelo_Airfly.FK_idasiento2" FromRole="Asientos" ToRole="Ubicacion1" />
         </EntityType>
         <EntityType Name="Avion">
           <Key>
@@ -677,6 +700,7 @@ error 6004: Una relación hace referencia a la tabla 'AirFly_BDD.dbo.Asiento_Avi
           <NavigationProperty Name="Vuelos" Relationship="Self.FK_idavion" FromRole="Avion" ToRole="Vuelos" />
           <NavigationProperty Name="Secciones" Relationship="Self.FK_idsecciones1" FromRole="Avion" ToRole="Secciones" />
           <Property Name="modelo_avion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="num_asientos" Type="Int32" />
         </EntityType>
         <EntityType Name="Boleto">
           <Key>
@@ -728,6 +752,7 @@ error 6004: Una relación hace referencia a la tabla 'AirFly_BDD.dbo.Asiento_Avi
           <Property Name="id_estadopago" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="descripcion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Compra" Relationship="Self.FK_idestadopago" FromRole="Estado_pago" ToRole="Compra" />
+          <Property Name="Descripcion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Metodo_pago">
           <Key>
@@ -776,6 +801,7 @@ error 6004: Una relación hace referencia a la tabla 'AirFly_BDD.dbo.Asiento_Avi
           <Property Name="tipo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="cvc" Type="Int32" />
           <NavigationProperty Name="Tarjeta" Relationship="Self.FK_idpaypal" FromRole="Paypal" ToRole="Tarjeta" />
+          <Property Name="nombre_master" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Perfil">
           <Key>
@@ -799,8 +825,8 @@ error 6004: Una relación hace referencia a la tabla 'AirFly_BDD.dbo.Asiento_Avi
             <PropertyRef Name="id_ruta" />
           </Key>
           <Property Name="id_ruta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="distancia" Type="Decimal" />
-          <Property Name="tiempo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="distancia" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="tiempo" Type="String" />
           <Property Name="aeropuerto_origen" Type="Int32" />
           <Property Name="aeropuerto_destino" Type="Int32" />
           <NavigationProperty Name="Aeropuerto" Relationship="Self.FK_idaerodestino" FromRole="Ruta" ToRole="Aeropuerto" />
@@ -857,7 +883,7 @@ error 6004: Una relación hace referencia a la tabla 'AirFly_BDD.dbo.Asiento_Avi
           </Key>
           <Property Name="id_vuelo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="fecha_vuelo" Type="DateTime" Precision="0" />
-          <Property Name="hora_vuelo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="hora_vuelo" Type="String" />
           <Property Name="tiempo_vuelo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="distancia_vuelo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="id_avion" Type="Int32" />
@@ -1242,6 +1268,11 @@ error 6004: Una relación hace referencia a la tabla 'AirFly_BDD.dbo.Asiento_Avi
             <End Role="Reservacion" EntitySet="Reservacion" />
           </AssociationSet>
           <EntitySet Name="Modelo_avion" EntityType="Modelo_Airfly.Modelo_avion" />
+          <EntitySet Name="Ubicacion1Set" EntityType="Modelo_Airfly.Ubicacion1" />
+          <AssociationSet Name="FK_idasiento2" Association="Modelo_Airfly.FK_idasiento2">
+            <End Role="Asientos" EntitySet="Asientos" />
+            <End Role="Ubicacion1" EntitySet="Ubicacion1Set" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Modelo_avion">
           <Key>
@@ -1249,7 +1280,30 @@ error 6004: Una relación hace referencia a la tabla 'AirFly_BDD.dbo.Asiento_Avi
           </Key>
           <Property Name="id_modelo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre_modelo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Filas" Type="Int32" />
+          <Property Name="columnas" Type="Int32" />
         </EntityType>
+        <EntityType Name="Ubicacion1">
+          <Key>
+            <PropertyRef Name="id_ubicacion" />
+          </Key>
+          <Property Name="id_ubicacion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre_ubicacion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="id_asiento" Type="Int32" />
+          <NavigationProperty Name="Asientos" Relationship="Modelo_Airfly.FK_idasiento2" FromRole="Ubicacion1" ToRole="Asientos" />
+        </EntityType>
+        <Association Name="FK_idasiento2">
+          <End Type="Modelo_Airfly.Asientos" Role="Asientos" Multiplicity="0..1" />
+          <End Type="Modelo_Airfly.Ubicacion1" Role="Ubicacion1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Asientos">
+              <PropertyRef Name="id_asiento" />
+            </Principal>
+            <Dependent Role="Ubicacion1">
+              <PropertyRef Name="id_asiento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1286,9 +1340,8 @@ error 6004: Una relación hace referencia a la tabla 'AirFly_BDD.dbo.Asiento_Avi
           <EntitySetMapping Name="Avion">
             <EntityTypeMapping TypeName="Modelo_Airfly.Avion">
               <MappingFragment StoreEntitySet="Avion">
+                <ScalarProperty Name="num_asientos" ColumnName="num_asientos" />
                 <ScalarProperty Name="id_avion" ColumnName="id_avion" />
-                <ScalarProperty Name="numfila_avion" ColumnName="numfila_avion" />
-                <ScalarProperty Name="numcolumna_avion" ColumnName="numcolumna_avion" />
                 <ScalarProperty Name="nombre_avion" ColumnName="nombre_avion" />
                 <ScalarProperty Name="id_aerolinea" ColumnName="id_aerolinea" />
                 <ScalarProperty Name="id_secciones" ColumnName="id_secciones" />
@@ -1332,8 +1385,8 @@ error 6004: Una relación hace referencia a la tabla 'AirFly_BDD.dbo.Asiento_Avi
           <EntitySetMapping Name="Estado_pago">
             <EntityTypeMapping TypeName="Modelo_Airfly.Estado_pago">
               <MappingFragment StoreEntitySet="Estado_pago">
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
                 <ScalarProperty Name="id_estadopago" ColumnName="id_estadopago" />
-                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1376,8 +1429,8 @@ error 6004: Una relación hace referencia a la tabla 'AirFly_BDD.dbo.Asiento_Avi
           <EntitySetMapping Name="Paypal">
             <EntityTypeMapping TypeName="Modelo_Airfly.Paypal">
               <MappingFragment StoreEntitySet="Paypal">
+                <ScalarProperty Name="nombre_master" ColumnName="nombre_master" />
                 <ScalarProperty Name="id_paypal" ColumnName="id_paypal" />
-                <ScalarProperty Name="nombre_paypal" ColumnName="nombre_paypal" />
                 <ScalarProperty Name="fecha_vencimiento" ColumnName="fecha_vencimiento" />
                 <ScalarProperty Name="tipo" ColumnName="tipo" />
                 <ScalarProperty Name="cvc" ColumnName="cvc" />
@@ -1403,7 +1456,6 @@ error 6004: Una relación hace referencia a la tabla 'AirFly_BDD.dbo.Asiento_Avi
           <EntitySetMapping Name="Ruta">
             <EntityTypeMapping TypeName="Modelo_Airfly.Ruta">
               <MappingFragment StoreEntitySet="Ruta">
-                <ScalarProperty Name="nombre_ruta1" ColumnName="nombre_ruta" />
                 <ScalarProperty Name="id_ruta" ColumnName="id_ruta" />
                 <ScalarProperty Name="distancia" ColumnName="distancia" />
                 <ScalarProperty Name="tiempo" ColumnName="tiempo" />
@@ -1434,9 +1486,6 @@ error 6004: Una relación hace referencia a la tabla 'AirFly_BDD.dbo.Asiento_Avi
               <MappingFragment StoreEntitySet="Usuario">
                 <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
                 <ScalarProperty Name="nombre_usuario" ColumnName="nombre_usuario" />
-                <ScalarProperty Name="apellidopat_usuario" ColumnName="apellidopat_usuario" />
-                <ScalarProperty Name="apellidomat_usuario" ColumnName="apellidomat_usuario" />
-                <ScalarProperty Name="correo_usuario" ColumnName="correo_usuario" />
                 <ScalarProperty Name="contraseña_usuario" ColumnName="contraseña_usuario" />
                 <ScalarProperty Name="id_perfil" ColumnName="id_perfil" />
               </MappingFragment>
@@ -1474,8 +1523,19 @@ error 6004: Una relación hace referencia a la tabla 'AirFly_BDD.dbo.Asiento_Avi
           <EntitySetMapping Name="Modelo_avion">
             <EntityTypeMapping TypeName="Modelo_Airfly.Modelo_avion">
               <MappingFragment StoreEntitySet="Modelo_avion">
+                <ScalarProperty Name="columnas" ColumnName="columnas" />
+                <ScalarProperty Name="Filas" ColumnName="Filas" />
                 <ScalarProperty Name="Nombre_modelo" ColumnName="Nombre_modelo" />
                 <ScalarProperty Name="id_modelo" ColumnName="id_modelo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ubicacion1Set">
+            <EntityTypeMapping TypeName="Modelo_Airfly.Ubicacion1">
+              <MappingFragment StoreEntitySet="Ubicacion">
+                <ScalarProperty Name="id_asiento" ColumnName="id_asiento" />
+                <ScalarProperty Name="nombre_ubicacion" ColumnName="nombre_ubicacion" />
+                <ScalarProperty Name="id_ubicacion" ColumnName="id_ubicacion" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

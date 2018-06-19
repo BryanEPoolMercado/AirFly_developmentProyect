@@ -62,3 +62,28 @@ C:\Users\bryan\Documents\GitHub Repositorios\AirFly_developmentProyect\Aerolinea
 C:\Users\bryan\Documents\GitHub Repositorios\AirFly_developmentProyect\Aerolineas_AirFly\obj\Debug\Aerolineas_AirFly.csproj.CopyComplete
 C:\Users\bryan\Documents\GitHub Repositorios\AirFly_developmentProyect\Aerolineas_AirFly\obj\Debug\Aerolineas_AirFly.exe
 C:\Users\bryan\Documents\GitHub Repositorios\AirFly_developmentProyect\Aerolineas_AirFly\obj\Debug\Aerolineas_AirFly.pdb
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\Aerolineas_AirFly\obj\Debug\Aerolineas_AirFly.csprojResolveAssemblyReference.cache
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\Aerolineas_AirFly\obj\Debug\Aerolineas_AirFly.GUI.frm_Avion_Aerolinea.resources
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\Aerolineas_AirFly\obj\Debug\Aerolineas_AirFly.GUI.frm_AvisoExit.resources
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\Aerolineas_AirFly\obj\Debug\Aerolineas_AirFly.GUI.frm_FondoPantalla.resources
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\Aerolineas_AirFly\obj\Debug\Aerolineas_AirFly.GUI.frm_modelo1.resources
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\Aerolineas_AirFly\obj\Debug\Aerolineas_AirFly.GUI.frm_modelo2.resources
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\Aerolineas_AirFly\obj\Debug\Aerolineas_AirFly.GUI.frm_modelo3.resources
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\Aerolineas_AirFly\obj\Debug\Aerolineas_AirFly.GUI.frm_modelo4.resources
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\Aerolineas_AirFly\obj\Debug\Aerolineas_AirFly.GUI.frm_modelo5.resources
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\Aerolineas_AirFly\obj\Debug\Aerolineas_AirFly.GUI.InformacionVuelo.resources
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\Aerolineas_AirFly\obj\Debug\Aerolineas_AirFly.frm_Login.resources
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\Aerolineas_AirFly\obj\Debug\Aerolineas_AirFly.GUI.frm_MensajeRegistro.resources
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\Aerolineas_AirFly\obj\Debug\Aerolineas_AirFly.GUI.frm_MenuPrincipal.resources
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\Aerolineas_AirFly\obj\Debug\Aerolineas_AirFly.GUI.frm_MisReservaciones.resources
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\Aerolineas_AirFly\obj\Debug\Aerolineas_AirFly.GUI.frm_Moneda_Tarjeta.resources
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\Aerolineas_AirFly\obj\Debug\Aerolineas_AirFly.GUI.frm_PaisesCiudades.resources
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\Aerolineas_AirFly\obj\Debug\Aerolineas_AirFly.GUI.frm_Registrar.resources
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\Aerolineas_AirFly\obj\Debug\Aerolineas_AirFly.GUI.frm_ReservacionVuelos.resources
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\Aerolineas_AirFly\obj\Debug\Aerolineas_AirFly.GUI.frm_Usuarios.resources
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\Aerolineas_AirFly\obj\Debug\Aerolineas_AirFly.GUI.frm_Vuelos_Rutas.resources
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\Aerolineas_AirFly\obj\Debug\Aerolineas_AirFly.Properties.Resources.resources
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\Aerolineas_AirFly\obj\Debug\Aerolineas_AirFly.csproj.GenerateResource.Cache
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\Aerolineas_AirFly\obj\Debug\Aerolineas_AirFly.csproj.CoreCompileInputs.cache
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\Aerolineas_AirFly\obj\Debug\Aerolineas_AirFly.exe
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\Aerolineas_AirFly\obj\Debug\Aerolineas_AirFly.pdb

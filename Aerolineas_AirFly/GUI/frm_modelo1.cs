@@ -15,6 +15,7 @@ namespace Aerolineas_AirFly.GUI
         public frm_modelo1()
         {
             InitializeComponent();
+            pnl_contenedor.Visible = true;
             cmb_clase_modelo1.SelectedItem = "Seleccione una clase";
             cmb_clase_modelo1.Items.Add("Primera clase");
             cmb_clase_modelo1.Items.Add("Clase Economica plus");
@@ -28,7 +29,7 @@ namespace Aerolineas_AirFly.GUI
         {
             if (cmb_clase_modelo1.SelectedItem.ToString() == "Primera clase")
             {
-                panel1.Visible = true;
+                pnl_contenedor.Visible = true;
             }
             ptb_avionmodel1.Visible = false;
         }

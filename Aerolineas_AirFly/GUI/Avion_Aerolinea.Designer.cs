@@ -57,8 +57,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txt_NumFilas = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.cmb_Secciones = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.cmb_Aerolinea = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_codigoAvion = new System.Windows.Forms.TextBox();
@@ -348,8 +346,6 @@
             this.bunifuCards1.Controls.Add(this.label6);
             this.bunifuCards1.Controls.Add(this.txt_NumFilas);
             this.bunifuCards1.Controls.Add(this.label3);
-            this.bunifuCards1.Controls.Add(this.cmb_Secciones);
-            this.bunifuCards1.Controls.Add(this.label5);
             this.bunifuCards1.Controls.Add(this.cmb_Aerolinea);
             this.bunifuCards1.Controls.Add(this.label4);
             this.bunifuCards1.Controls.Add(this.txt_codigoAvion);
@@ -367,7 +363,7 @@
             // cmb_modelo
             // 
             this.cmb_modelo.FormattingEnabled = true;
-            this.cmb_modelo.Location = new System.Drawing.Point(598, 38);
+            this.cmb_modelo.Location = new System.Drawing.Point(412, 41);
             this.cmb_modelo.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_modelo.Name = "cmb_modelo";
             this.cmb_modelo.Size = new System.Drawing.Size(122, 21);
@@ -377,7 +373,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(504, 41);
+            this.label8.Location = new System.Drawing.Point(318, 44);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(89, 13);
             this.label8.TabIndex = 32;
@@ -524,25 +520,6 @@
             this.label3.Size = new System.Drawing.Size(83, 13);
             this.label3.TabIndex = 24;
             this.label3.Text = "Numero de filas:";
-            // 
-            // cmb_Secciones
-            // 
-            this.cmb_Secciones.FormattingEnabled = true;
-            this.cmb_Secciones.Location = new System.Drawing.Point(349, 38);
-            this.cmb_Secciones.Margin = new System.Windows.Forms.Padding(2);
-            this.cmb_Secciones.Name = "cmb_Secciones";
-            this.cmb_Secciones.Size = new System.Drawing.Size(122, 21);
-            this.cmb_Secciones.TabIndex = 23;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(284, 41);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 13);
-            this.label5.TabIndex = 22;
-            this.label5.Text = "Secciones:";
             // 
             // cmb_Aerolinea
             // 
@@ -720,8 +697,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txt_NumFilas;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cmb_Secciones;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cmb_Aerolinea;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_codigoAvion;

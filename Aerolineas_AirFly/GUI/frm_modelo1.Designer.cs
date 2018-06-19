@@ -32,7 +32,7 @@
             this.ptb_avionmodel1 = new System.Windows.Forms.PictureBox();
             this.cmb_clase_modelo1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnl_contenedor = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.ptb_avionmodel1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,20 +67,20 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Seleccione una clase";
             // 
-            // panel1
+            // pnl_contenedor
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(223, 89);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(393, 173);
-            this.panel1.TabIndex = 3;
+            this.pnl_contenedor.BackColor = System.Drawing.Color.White;
+            this.pnl_contenedor.Location = new System.Drawing.Point(77, 197);
+            this.pnl_contenedor.Name = "pnl_contenedor";
+            this.pnl_contenedor.Size = new System.Drawing.Size(652, 241);
+            this.pnl_contenedor.TabIndex = 3;
             // 
             // frm_modelo1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnl_contenedor);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmb_clase_modelo1);
             this.Controls.Add(this.ptb_avionmodel1);
@@ -98,6 +98,6 @@
         private System.Windows.Forms.PictureBox ptb_avionmodel1;
         private System.Windows.Forms.ComboBox cmb_clase_modelo1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnl_contenedor;
     }
 }

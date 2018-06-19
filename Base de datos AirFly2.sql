@@ -98,6 +98,14 @@ CREATE TABLE Asientos
     CONSTRAINT PK_asientos PRIMARY KEY(id_asiento),
 	CONSTRAINT FK_idsecciones FOREIGN KEY (id_secciones)REFERENCES Secciones(id_secciones)
 )
+create table Modelo_avion(
+id_modelo int identity(1,1) not null,
+Nombre_modelo varchar(50),
+Filas int,
+columnas int,
+constraint PK_id_modelo primary key(id_modelo)		
+)
+
 
 CREATE TABLE Avion
 (
@@ -105,16 +113,13 @@ CREATE TABLE Avion
     numfila_avion int,
 	numcolumna_avion int,
     nombre_avion varchar(50),
+	id_modelo int,
     id_aerolinea int,
     id_secciones int,
     CONSTRAINT PK_idavion PRIMARY KEY(id_avion),
+	CONSTRAINT FK_MODELO_AVION FOREIGN KEY (id_modelo)references Modelo_avion(id_modelo),
 	CONSTRAINT FK_idsecciones1 FOREIGN KEY (id_secciones)REFERENCES Secciones(id_secciones),
     CONSTRAINT FK_idaerolinea FOREIGN KEY (id_aerolinea)REFERENCES Aerolinea(id_aerolinea)
-)
-create table Modelo_avion(
-id_modelo int identity(1,1) not null,
-Nombre_modelo varchar(50),
-constraint PK_id_modelo primary key(id_modelo)		
 )
 
 CREATE TABLE Ruta

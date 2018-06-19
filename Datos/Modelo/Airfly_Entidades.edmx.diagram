@@ -50,6 +50,8 @@
         <AssociationConnector Association="Modelo_Airfly.Detalle_Compra" ManuallyRouted="false" />
         <AssociationConnector Association="Modelo_Airfly.Reservacion_Pasajero" ManuallyRouted="false" />
         <EntityTypeShape EntityType="Modelo_Airfly.Modelo_avion" Width="1.5" PointX="7.375" PointY="9.75" />
+        <EntityTypeShape EntityType="Modelo_Airfly.Ubicacion1" Width="1.5" PointX="5.25" PointY="29.75" />
+        <AssociationConnector Association="Modelo_Airfly.FK_idasiento2" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

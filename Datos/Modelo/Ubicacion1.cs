@@ -12,7 +12,7 @@ namespace Datos.Modelo
     using System;
     using System.Collections.Generic;
     
-    public partial class Ubicacion
+    public partial class Ubicacion1
     {
         public int id_ubicacion { get; set; }
         public string nombre_ubicacion { get; set; }

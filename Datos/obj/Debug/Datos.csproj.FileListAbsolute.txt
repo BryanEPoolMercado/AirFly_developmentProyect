@@ -22,3 +22,14 @@ C:\Users\bryan\Documents\GitHub Repositorios\AirFly_developmentProyect\Datos\obj
 C:\Users\bryan\Documents\GitHub Repositorios\AirFly_developmentProyect\Datos\obj\Debug\Datos.csproj.CopyComplete
 C:\Users\bryan\Documents\GitHub Repositorios\AirFly_developmentProyect\Datos\obj\Debug\Datos.dll
 C:\Users\bryan\Documents\GitHub Repositorios\AirFly_developmentProyect\Datos\obj\Debug\Datos.pdb
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\Datos\bin\Debug\Datos.dll.config
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\Datos\bin\Debug\Datos.dll
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\Datos\bin\Debug\Datos.pdb
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\Datos\bin\Debug\EntityFramework.dll
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\Datos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\Datos\bin\Debug\EntityFramework.xml
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\Datos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\Datos\obj\Debug\Datos.dll
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\Datos\obj\Debug\Datos.pdb
