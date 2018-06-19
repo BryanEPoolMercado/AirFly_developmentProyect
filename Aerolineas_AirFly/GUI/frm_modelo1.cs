@@ -15,6 +15,12 @@ namespace Aerolineas_AirFly.GUI
         public frm_modelo1()
         {
             InitializeComponent();
+            cmb_clase_modelo1.Items.Add("Seleccione una clase");
+            cmb_clase_modelo1.Items.Add("Primera clase");
+            cmb_clase_modelo1.Items.Add("Clase Economica plus");
+            cmb_clase_modelo1.Items.Add("Clase Economica");
+
+
         }
     }
 }

@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_modelo5));
             this.label1 = new System.Windows.Forms.Label();
-            this.cmb_clase = new System.Windows.Forms.ComboBox();
+            this.cmb_clase_modelo5 = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -45,15 +45,15 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Seleccione una clase";
             // 
-            // cmb_clase
+            // cmb_clase_modelo5
             // 
-            this.cmb_clase.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmb_clase.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_clase.FormattingEnabled = true;
-            this.cmb_clase.Location = new System.Drawing.Point(344, 40);
-            this.cmb_clase.Name = "cmb_clase";
-            this.cmb_clase.Size = new System.Drawing.Size(139, 24);
-            this.cmb_clase.TabIndex = 4;
+            this.cmb_clase_modelo5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_clase_modelo5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_clase_modelo5.FormattingEnabled = true;
+            this.cmb_clase_modelo5.Location = new System.Drawing.Point(344, 40);
+            this.cmb_clase_modelo5.Name = "cmb_clase_modelo5";
+            this.cmb_clase_modelo5.Size = new System.Drawing.Size(139, 24);
+            this.cmb_clase_modelo5.TabIndex = 4;
             // 
             // pictureBox1
             // 
@@ -71,7 +71,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.cmb_clase);
+            this.Controls.Add(this.cmb_clase_modelo5);
             this.Controls.Add(this.pictureBox1);
             this.Name = "frm_modelo5";
             this.Text = "Seleccion de asientos";
@@ -84,7 +84,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cmb_clase;
+        private System.Windows.Forms.ComboBox cmb_clase_modelo5;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
