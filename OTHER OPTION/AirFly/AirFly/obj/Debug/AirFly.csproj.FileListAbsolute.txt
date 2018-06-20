@@ -1,0 +1,11 @@
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\OTHER OPTION\AirFly\AirFly\obj\Debug\AirFly.csprojResolveAssemblyReference.cache
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\OTHER OPTION\AirFly\AirFly\obj\Debug\AirFly.GUI.frmMenu.resources
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\OTHER OPTION\AirFly\AirFly\obj\Debug\AirFly.Properties.Resources.resources
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\OTHER OPTION\AirFly\AirFly\obj\Debug\AirFly.csproj.GenerateResource.Cache
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\OTHER OPTION\AirFly\AirFly\obj\Debug\AirFly.csproj.CoreCompileInputs.cache
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\OTHER OPTION\AirFly\AirFly\bin\Debug\AirFly.exe.config
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\OTHER OPTION\AirFly\AirFly\bin\Debug\AirFly.exe
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\OTHER OPTION\AirFly\AirFly\bin\Debug\AirFly.pdb
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\OTHER OPTION\AirFly\AirFly\bin\Debug\Bunifu_UI_v1.5.3.dll
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\OTHER OPTION\AirFly\AirFly\obj\Debug\AirFly.exe
+C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\OTHER OPTION\AirFly\AirFly\obj\Debug\AirFly.pdb
