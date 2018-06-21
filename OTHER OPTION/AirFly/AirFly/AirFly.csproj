@@ -50,16 +50,61 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GUI\frmAviso_salida_app.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmAviso_salida_app.Designer.cs">
+      <DependentUpon>frmAviso_salida_app.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmBuscar_vuelos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmBuscar_vuelos.Designer.cs">
+      <DependentUpon>frmBuscar_vuelos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmComprar_boleto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmComprar_boleto.Designer.cs">
+      <DependentUpon>frmComprar_boleto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmInicio.Designer.cs">
+      <DependentUpon>frmInicio.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmMis_boletos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmMis_boletos.Designer.cs">
+      <DependentUpon>frmMis_boletos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\frmAviso_salida_app.resx">
+      <DependentUpon>frmAviso_salida_app.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmBuscar_vuelos.resx">
+      <DependentUpon>frmBuscar_vuelos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmComprar_boleto.resx">
+      <DependentUpon>frmComprar_boleto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmInicio.resx">
+      <DependentUpon>frmInicio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmMis_boletos.resx">
+      <DependentUpon>frmMis_boletos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -9,3 +9,19 @@ C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\OTHER OPTION\AirFly\Air
 C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\OTHER OPTION\AirFly\AirFly\bin\Debug\Bunifu_UI_v1.5.3.dll
 C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\OTHER OPTION\AirFly\AirFly\obj\Debug\AirFly.exe
 C:\Users\USER\Documents\GitHub\AirFly_developmentProyect\OTHER OPTION\AirFly\AirFly\obj\Debug\AirFly.pdb
+C:\Users\bryan\Documents\GitHub Repositorios\AirFly_developmentProyect\OTHER OPTION\AirFly\AirFly\obj\Debug\AirFly.csprojAssemblyReference.cache
+C:\Users\bryan\Documents\GitHub Repositorios\AirFly_developmentProyect\OTHER OPTION\AirFly\AirFly\obj\Debug\AirFly.GUI.frmInicio.resources
+C:\Users\bryan\Documents\GitHub Repositorios\AirFly_developmentProyect\OTHER OPTION\AirFly\AirFly\obj\Debug\AirFly.GUI.frmMenu.resources
+C:\Users\bryan\Documents\GitHub Repositorios\AirFly_developmentProyect\OTHER OPTION\AirFly\AirFly\obj\Debug\AirFly.Properties.Resources.resources
+C:\Users\bryan\Documents\GitHub Repositorios\AirFly_developmentProyect\OTHER OPTION\AirFly\AirFly\obj\Debug\AirFly.csproj.GenerateResource.cache
+C:\Users\bryan\Documents\GitHub Repositorios\AirFly_developmentProyect\OTHER OPTION\AirFly\AirFly\obj\Debug\AirFly.csproj.CoreCompileInputs.cache
+C:\Users\bryan\Documents\GitHub Repositorios\AirFly_developmentProyect\OTHER OPTION\AirFly\AirFly\obj\Debug\AirFly.exe
+C:\Users\bryan\Documents\GitHub Repositorios\AirFly_developmentProyect\OTHER OPTION\AirFly\AirFly\obj\Debug\AirFly.pdb
+C:\Users\bryan\Documents\GitHub Repositorios\AirFly_developmentProyect\OTHER OPTION\AirFly\AirFly\bin\Debug\AirFly.exe.config
+C:\Users\bryan\Documents\GitHub Repositorios\AirFly_developmentProyect\OTHER OPTION\AirFly\AirFly\bin\Debug\AirFly.exe
+C:\Users\bryan\Documents\GitHub Repositorios\AirFly_developmentProyect\OTHER OPTION\AirFly\AirFly\bin\Debug\AirFly.pdb
+C:\Users\bryan\Documents\GitHub Repositorios\AirFly_developmentProyect\OTHER OPTION\AirFly\AirFly\obj\Debug\AirFly.GUI.frmBuscar_vuelos.resources
+C:\Users\bryan\Documents\GitHub Repositorios\AirFly_developmentProyect\OTHER OPTION\AirFly\AirFly\obj\Debug\AirFly.GUI.frmComprar_boleto.resources
+C:\Users\bryan\Documents\GitHub Repositorios\AirFly_developmentProyect\OTHER OPTION\AirFly\AirFly\obj\Debug\AirFly.GUI.frmMis_boletos.resources
+C:\Users\bryan\Documents\GitHub Repositorios\AirFly_developmentProyect\OTHER OPTION\AirFly\AirFly\obj\Debug\AirFly.csproj.CopyComplete
+C:\Users\bryan\Documents\GitHub Repositorios\AirFly_developmentProyect\OTHER OPTION\AirFly\AirFly\obj\Debug\AirFly.GUI.frmAviso_salida_app.resources
